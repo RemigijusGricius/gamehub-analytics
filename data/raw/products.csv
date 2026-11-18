@@ -1,0 +1,81 @@
+product_id,category,region,list_price_eur
+P001,Subscription,GLOBAL,15.52
+P002,Subscription,EU,7.91
+P003,Game Key,EU,68.04
+P004,Subscription,US,74.81
+P005,Software,US,9.71
+P006,Software,GLOBAL,51.74
+P007,Software,GLOBAL,64.38
+P008,Subscription,US,17.99
+P009,Gift Card,US,76.13
+P010,Software,US,44.02
+P011,Subscription,GLOBAL,92.04
+P012,Game Key,US,71.51
+P013,Subscription,GLOBAL,74.82
+P014,Subscription,US,58.31
+P015,Game Key,US,33.15
+P016,Gift Card,GLOBAL,60.13
+P017,Subscription,US,37.53
+P018,Game Key,US,28.69
+P019,Gift Card,GLOBAL,57.03
+P020,Game Key,EU,24.55
+P021,Software,US,84.43
+P022,Subscription,EU,74.24
+P023,Subscription,GLOBAL,38.96
+P024,Gift Card,EU,72.85
+P025,Game Key,EU,18.97
+P026,Subscription,EU,91.04
+P027,Gift Card,EU,20.3
+P028,Game Key,GLOBAL,87.06
+P029,Gift Card,US,36.05
+P030,Game Key,GLOBAL,8.07
+P031,Gift Card,US,90.17
+P032,Game Key,US,28.27
+P033,Gift Card,US,37.8
+P034,Subscription,EU,90.21
+P035,Game Key,GLOBAL,66.37
+P036,Gift Card,EU,24.44
+P037,Gift Card,GLOBAL,82.11
+P038,Software,GLOBAL,37.8
+P039,Software,GLOBAL,78.22
+P040,Game Key,GLOBAL,66.79
+P041,Software,GLOBAL,79.32
+P042,Game Key,EU,49.02
+P043,Gift Card,EU,23.19
+P044,Gift Card,EU,15.46
+P045,Gift Card,EU,23.15
+P046,Game Key,EU,14.24
+P047,Software,US,38.27
+P048,Game Key,EU,35.09
+P049,Software,EU,47.21
+P050,Subscription,GLOBAL,68.47
+P051,Software,US,53.69
+P052,Software,GLOBAL,84.66
+P053,Gift Card,GLOBAL,81.3
+P054,Software,GLOBAL,9.52
+P055,Subscription,EU,28.5
+P056,Software,EU,92.87
+P057,Game Key,GLOBAL,6.29
+P058,Gift Card,EU,10.32
+P059,Software,EU,78.17
+P060,Game Key,US,73.06
+P061,Game Key,US,31.11
+P062,Gift Card,GLOBAL,64.87
+P063,Gift Card,US,83.17
+P064,Software,US,48.36
+P065,Gift Card,US,51.36
+P066,Gift Card,GLOBAL,63.15
+P067,Software,EU,46.73
+P068,Software,US,53.76
+P069,Subscription,GLOBAL,98.16
+P070,Gift Card,EU,73.43
+P071,Gift Card,GLOBAL,31.87
+P072,Software,US,64.78
+P073,Gift Card,US,79.87
+P074,Game Key,EU,69.69
+P075,Subscription,EU,12.98
+P076,Gift Card,US,77.51
+P077,Game Key,US,5.01
+P078,Gift Card,GLOBAL,93.73
+P079,Gift Card,GLOBAL,31.03
+P080,Software,EU,47.09

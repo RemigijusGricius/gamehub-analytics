@@ -1,0 +1,29 @@
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# DuckDB local databases
+*.duckdb
+*.duckdb.wal
+
+# dbt generated files
+**/target/
+**/dbt_packages/
+**/logs/
+
+# dbt local credentials
+**/profiles.yml
+**/.user.yml
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Editor and operating system
+.vscode/
+.DS_Store
+Thumbs.db

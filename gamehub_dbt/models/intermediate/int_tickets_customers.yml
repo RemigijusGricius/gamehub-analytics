@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_tickets_customers
+    description: "Tickets enriched with customer information."
+
+    columns:
+      - name: ticket_id
+        data_tests:
+          - unique
+          - not_null

@@ -1,0 +1,13 @@
+
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Gold dimension table containing one row per customer, including signup date, country, and acquisition channel."
+
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer."
+        data_tests:
+          - unique
+          - not_null

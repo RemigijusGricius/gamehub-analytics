@@ -1,0 +1,33 @@
+
+version: 2
+
+models:
+  - name: mart_support_by_channel
+    description: "Support performance metrics aggregated by channel. One row per channel."
+
+    columns:
+      - name: channel
+        description: "Customer support channel."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: total_tickets
+        description: "Number of tickets in the channel."
+        data_tests:
+          - not_null
+
+      - name: resolved_tickets
+        description: "Number of tickets with at least one resolution event."
+        data_tests:
+          - not_null
+
+      - name: bot_resolved_tickets
+        description: "Number of tickets whose latest resolution actor was a bot."
+        data_tests:
+          - not_null
+
+      - name: reopened_tickets
+        description: "Number of tickets reopened at least once."
+        data_tests:
+          - not_null

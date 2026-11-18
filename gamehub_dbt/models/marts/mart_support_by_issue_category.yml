@@ -1,0 +1,32 @@
+
+version: 2
+
+models:
+  - name: mart_support_by_issue_category
+    description: "Support performance metrics aggregated by issue category."
+
+    columns:
+      - name: issue_category
+        description: "Customer support issue category. May be blank or NULL."
+        data_tests:
+          - unique
+
+      - name: total_tickets
+        data_tests:
+          - not_null
+
+      - name: resolved_tickets
+        data_tests:
+          - not_null
+
+      - name: bot_resolved_tickets
+        data_tests:
+          - not_null
+
+      - name: reopened_tickets
+        data_tests:
+          - not_null
+
+      - name: reopening_rate
+        data_tests:
+          - not_null

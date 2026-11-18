@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Standardized customer records."
+
+    columns:
+      - name: customer_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id

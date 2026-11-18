@@ -1,0 +1,37 @@
+
+version: 2
+
+models:
+  - name: mart_support_by_priority
+    description: "Customer support performance aggregated by ticket priority."
+
+    columns:
+      - name: priority
+        description: "Ticket priority level."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: total_tickets
+        data_tests:
+          - not_null
+
+      - name: resolved_tickets
+        data_tests:
+          - not_null
+
+      - name: resolution_rate
+        data_tests:
+          - not_null
+
+      - name: bot_resolved_tickets
+        data_tests:
+          - not_null
+
+      - name: reopened_tickets
+        data_tests:
+          - not_null
+
+      - name: reopening_rate
+        data_tests:
+          - not_null

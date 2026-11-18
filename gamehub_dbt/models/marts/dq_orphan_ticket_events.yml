@@ -1,0 +1,16 @@
+
+version: 2
+
+models:
+  - name: dq_orphan_ticket_events
+    description: >
+      Contains ticket events that do not have a matching
+      ticket in stg_tickets. Used to monitor and investigate
+      orphan events.
+
+    columns:
+      - name: event_id
+        description: "Unique identifier of the orphan event."
+        data_tests:
+          - unique
+          - not_null

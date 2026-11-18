@@ -1,0 +1,29 @@
+
+version: 2
+
+models:
+  - name: stg_ticket_events
+    description: "Staging model containing individual support ticket lifecycle events."
+
+    columns:
+      - name: event_id
+        description: "Unique identifier for each ticket event."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: ticket_id
+        description: "Identifier linking the event to its support ticket."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_tickets')
+                field: ticket_id
+              config:
+                severity: warn
+
+      - name: event_timestamp
+        description: "Timestamp when the ticket event occurred."
+        data_tests:
+          - not_null
