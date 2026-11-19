@@ -1,5 +1,9 @@
 # GameHub — Customer Support Analytics Platform
 
+
+[![CI](https://github.com/RemigijusGricius/gamehub-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/RemigijusGricius/gamehub-analytics/actions/workflows/ci.yml)
+
+
 **An end-to-end Analytics Engineering portfolio project using Python, DuckDB, dbt Core, SQL, and GitHub Actions.**
 
 GameHub is a fictional digital marketplace used to demonstrate how raw operational data can be transformed into reliable, tested, analytics-ready datasets.
