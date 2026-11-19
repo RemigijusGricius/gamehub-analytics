@@ -1,0 +1,39 @@
+relationship 82e6a5ff-a298-40f6-8080-c1adb0f298b5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_customers.signup_at
+	toColumn: LocalDateTable_73dae277-61a4-44ae-bd6c-eea2e963006b.Date
+
+relationship 15c561e3-8d7f-4199-9e3c-4f30dfaf376d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_tickets.created_at
+	toColumn: LocalDateTable_97951f58-6708-4bfb-b245-b71fe0c59936.Date
+
+relationship c510d332-48b9-4554-b93e-d7695f672d69
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_tickets.created_date
+	toColumn: LocalDateTable_299d9714-4782-445f-a1f6-71391a30c0fd.Date
+
+relationship af971206-4ed4-426f-bb9e-88e674c5f66e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_tickets.agent_first_response_at
+	toColumn: LocalDateTable_1a37f11f-0448-4e93-8459-33e4470eb01f.Date
+
+relationship ab98041e-25c9-4f02-a2ca-129778dd1e8a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_tickets.resolved_at
+	toColumn: LocalDateTable_1c7b97c9-86da-45d2-ae1b-b0fcff19d7e0.Date
+
+relationship c30ae5f1-a283-46eb-acb9-5f3050aa5c25
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_tickets.first_resolved_at
+	toColumn: LocalDateTable_f699dac5-6148-4b81-b007-cacd72c78a3e.Date
+
+relationship 6370b030-7a31-42b3-bcc9-a071fdbefd0b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_tickets.last_resolved_at
+	toColumn: LocalDateTable_5f0259d6-4f6a-4dc6-bb98-2285aad24d85.Date
+
+relationship AutoDetected_d5037d98-f23a-4ae5-badb-2ca31dc439dd
+	fromColumn: fct_tickets.customer_id
+	toColumn: dim_customers.customer_id
+

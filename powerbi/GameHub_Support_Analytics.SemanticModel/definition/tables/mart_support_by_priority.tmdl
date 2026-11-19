@@ -1,0 +1,112 @@
+table mart_support_by_priority
+	lineageTag: a281022d-bec0-435d-9ef1-6e3866a82800
+
+	column priority
+		dataType: string
+		lineageTag: 76aea54a-1515-40da-af24-209fb53405f7
+		summarizeBy: none
+		sourceColumn: priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: ad196936-1abb-4df0-a7f2-e31cb96b06b6
+		summarizeBy: sum
+		sourceColumn: total_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolved_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: ce98df49-ab42-4638-85b3-07c12e1e3127
+		summarizeBy: sum
+		sourceColumn: resolved_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolution_rate
+		dataType: double
+		lineageTag: 9b285528-7f9a-4953-b068-9523037e0f2a
+		summarizeBy: sum
+		sourceColumn: resolution_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_first_response_hours
+		dataType: double
+		lineageTag: eeacc5ed-b12e-4389-b682-9bd366179e16
+		summarizeBy: sum
+		sourceColumn: avg_first_response_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_first_resolution_hours
+		dataType: double
+		lineageTag: 60384f20-f208-449a-b1c0-58587ce11706
+		summarizeBy: sum
+		sourceColumn: avg_first_resolution_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_last_resolution_hours
+		dataType: double
+		lineageTag: e5c09add-6e16-4357-b3a7-141333d98b20
+		summarizeBy: sum
+		sourceColumn: avg_last_resolution_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bot_resolved_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: 93bf4393-b808-40ba-89fa-fb2430e68742
+		summarizeBy: sum
+		sourceColumn: bot_resolved_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column reopened_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: 97b6760a-311f-4eec-9c32-44f3cbee2445
+		summarizeBy: sum
+		sourceColumn: reopened_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column reopening_rate
+		dataType: double
+		lineageTag: db1f5c89-fa8a-4bde-8e99-7574b7331687
+		summarizeBy: sum
+		sourceColumn: reopening_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition mart_support_by_priority = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(
+				        File.Contents("C:\Users\griciurz\gamehub-analytics\data\exports\mart_support_by_priority.parquet"),
+				        [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]
+				    )
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

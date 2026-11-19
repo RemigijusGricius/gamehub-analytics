@@ -1,0 +1,111 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 81.741322539855929,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 63
+          },
+          "nodeIndex": "dim_customers",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 346.0106584785114,
+            "y": 535.13726280354138
+          },
+          "nodeIndex": "fct_tickets",
+          "nodeLineageTag": "ab5ca432-32e5-4061-a897-5c9eb55ca907",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 541.222670202461,
+            "y": 34.730664061344534
+          },
+          "nodeIndex": "mart_support_by_channel",
+          "nodeLineageTag": "c318e710-e7a1-4146-8894-3f75cad2439a",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 3
+          },
+          "nodeIndex": "mart_support_by_issue_category",
+          "nodeLineageTag": "535c5ec5-4caf-47bb-a56e-ce30d4342050",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 859.77070314117645,
+            "y": 721.16923823907564
+          },
+          "nodeIndex": "mart_support_by_priority",
+          "nodeLineageTag": "a281022d-bec0-435d-9ef1-6e3866a82800",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1420,
+            "y": 3
+          },
+          "nodeIndex": "mart_support_kpis",
+          "nodeLineageTag": "39783c46-cedd-45fd-9d08-d5a40eb7a446",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1704,
+            "y": 410.08461911953782
+          },
+          "nodeIndex": "_Measures",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 70.95554390096882,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

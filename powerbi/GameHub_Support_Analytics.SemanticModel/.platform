@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "GameHub_Support_Analytics"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8f9a244b-3fd1-4184-883c-8e252ff1268d"
+  }
+}

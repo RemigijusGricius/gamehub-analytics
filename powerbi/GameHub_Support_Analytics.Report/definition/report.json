@@ -1,0 +1,108 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "Fluent2-CY26SU10",
+      "reportVersionAtImport": {
+        "visual": "2.14.0",
+        "report": "3.4.0",
+        "page": "2.3.1"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "GameHub_Dark_Edition_-_Enhance24262996039793594.json",
+      "reportVersionAtImport": {
+        "visual": "2.14.0",
+        "report": "3.4.0",
+        "page": "2.3.1"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "Fluent2-CY26SU10",
+          "path": "BaseThemes/Fluent2-CY26SU10.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "circle-check-big565117888721563.svg",
+          "path": "circle-check-big565117888721563.svg",
+          "type": "Image"
+        },
+        {
+          "name": "clock4994595804105152.svg",
+          "path": "clock4994595804105152.svg",
+          "type": "Image"
+        },
+        {
+          "name": "GameHub_Dark_Edition_-_Enhance24262996039793594.json",
+          "path": "GameHub_Dark_Edition_-_Enhance24262996039793594.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "Navy_Gamepad_Dashboard_Glow4436533704767588.png",
+          "path": "Navy_Gamepad_Dashboard_Glow4436533704767588.png",
+          "type": "Image"
+        },
+        {
+          "name": "ticket_(2)09159806752056221.svg",
+          "path": "ticket_(2)09159806752056221.svg",
+          "type": "Image"
+        },
+        {
+          "name": "zap16783349894923694.svg",
+          "path": "zap16783349894923694.svg",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

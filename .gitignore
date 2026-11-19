@@ -29,3 +29,9 @@ __pycache__/
 Thumbs.db
 
 data/exports/
+
+# Power BI local files
+**/.pbi/
+
+# Power BI temporary files
+*.pbit.cache

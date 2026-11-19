@@ -1,0 +1,107 @@
+table mart_support_kpis
+	lineageTag: 39783c46-cedd-45fd-9d08-d5a40eb7a446
+
+	column total_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: 29186b8f-ea34-40e3-b27e-b30b26e05847
+		summarizeBy: sum
+		sourceColumn: total_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_first_response_hours
+		dataType: double
+		lineageTag: 5cd68477-ea79-4cca-b4a1-8f2b472985ff
+		summarizeBy: sum
+		sourceColumn: avg_first_response_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_resolution_hours
+		dataType: double
+		lineageTag: 4d1646b9-06ef-44c2-9094-d494fcde0698
+		summarizeBy: sum
+		sourceColumn: avg_resolution_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column resolution_rate
+		dataType: double
+		lineageTag: 832084e5-6e8c-4762-a99b-cca86de5ee76
+		summarizeBy: sum
+		sourceColumn: resolution_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column resolved_within_24h
+		dataType: double
+		lineageTag: 96d07448-095e-4008-9486-fdaa3481499e
+		summarizeBy: sum
+		sourceColumn: resolved_within_24h
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bot_resolution_rate
+		dataType: double
+		lineageTag: dff9fbef-e3bc-421f-8581-e892adfc3872
+		summarizeBy: sum
+		sourceColumn: bot_resolution_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column reopening_rate
+		dataType: double
+		lineageTag: aaec0a66-dcb8-4e49-a6a5-c116ac66c452
+		summarizeBy: sum
+		sourceColumn: reopening_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_last_resolution_hours
+		dataType: double
+		lineageTag: f71dcffd-fb04-4569-a7ae-6c93405f77f9
+		summarizeBy: sum
+		sourceColumn: avg_last_resolution_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column missing_agent_response_rate
+		dataType: double
+		lineageTag: ceead193-cdb8-433e-ab2c-7562ec54ad3b
+		summarizeBy: sum
+		sourceColumn: missing_agent_response_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition mart_support_kpis = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(
+				        File.Contents("C:\Users\griciurz\gamehub-analytics\data\exports\mart_support_kpis.parquet"),
+				        [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]
+				    )
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

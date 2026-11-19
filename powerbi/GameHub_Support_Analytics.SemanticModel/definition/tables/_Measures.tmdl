@@ -1,0 +1,88 @@
+table _Measures
+	lineageTag: 2d9176e5-dfb5-4afb-a881-2d66c6e4ccad
+
+	measure 'Total Tickets' =
+			
+			DISTINCTCOUNT(fct_tickets[ticket_id])
+		formatString: 0.00
+		displayFolder: _Measures
+		lineageTag: aeac4462-ecbb-4da5-bd3d-1351bf991655
+
+	measure 'Resolution Rate' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        DISTINCTCOUNT(fct_tickets[ticket_id]),
+			        NOT ISBLANK(fct_tickets[last_resolved_at])
+			    ),
+			    [Total Tickets],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: _Measures
+		lineageTag: bdbf61ef-6779-4217-bc02-77b0b63452e5
+
+	measure 'Avg First Response (Hours)' =
+			
+			AVERAGE(fct_tickets[first_response_hours])
+		formatString: " 0.00 ""h"""
+		displayFolder: _Measures
+		lineageTag: 58a62d3e-e897-420f-91b5-22b05800e61b
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Avg Resolution Time (Hours)' =
+			
+			AVERAGE(fct_tickets[last_resolution_hours])
+		formatString: " 0.00 ""h"""
+		displayFolder: _Measures
+		lineageTag: 0283ea35-1840-4b6c-beaa-165912555e14
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Resolved Tickets' =
+			
+			CALCULATE(
+			    [Total Tickets],
+			    NOT ISBLANK(fct_tickets[last_resolved_at])
+			)
+		formatString: 0
+		displayFolder: _Measures
+		lineageTag: 8cde697b-b676-40bc-ac69-d9e74f07605f
+
+	measure 'Unresolved Tickets' =
+			
+			[Total Tickets] - [Resolved Tickets]
+		formatString: 0
+		displayFolder: _Measures
+		lineageTag: bd5ef166-474f-411c-b797-17e3ba5bf70a
+
+	measure 'Unresolved Rate' =
+			
+			DIVIDE(
+			    [Unresolved Tickets],
+			    [Total Tickets],
+			    0
+			)
+		displayFolder: _Measures
+		lineageTag: 9e04e0e6-bfa9-4552-bf33-0dfca5c54616
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		formatString: 0
+		lineageTag: a6ec5fee-0ab8-4d9c-afd7-ccd990eb6d71
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 62190ac592ab4b10a72022a73645cff4
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+
