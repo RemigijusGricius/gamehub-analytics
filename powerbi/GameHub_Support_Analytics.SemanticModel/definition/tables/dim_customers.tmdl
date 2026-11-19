@@ -1,0 +1,56 @@
+table dim_customers
+	lineageTag: 512147fd-3c39-4b34-9c2e-d9a1225948fc
+
+	column customer_id
+		dataType: string
+		lineageTag: 2dda09e3-0a81-4588-b14e-376e92f843ba
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column signup_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2226cb68-f04f-4740-ad12-ec74f35ed09c
+		summarizeBy: none
+		sourceColumn: signup_at
+
+		variation Variation
+			isDefault
+			relationship: 82e6a5ff-a298-40f6-8080-c1adb0f298b5
+			defaultHierarchy: LocalDateTable_73dae277-61a4-44ae-bd6c-eea2e963006b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: cf7368d3-0874-4e28-bbee-a64929ddcf89
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column acquisition_channel
+		dataType: string
+		lineageTag: d55e58c1-4afc-4587-9e8b-3fbdcdf25b4e
+		summarizeBy: none
+		sourceColumn: acquisition_channel
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_customers = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(
+				        File.Contents("C:\Users\griciurz\gamehub-analytics\data\exports\dim_customers.parquet"),
+				        [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]
+				    )
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,235 @@
+table fct_tickets
+	lineageTag: ab5ca432-32e5-4061-a897-5c9eb55ca907
+
+	column ticket_id
+		dataType: string
+		lineageTag: ed90ebab-9700-4ad7-a653-4edfe9ccdfe8
+		summarizeBy: none
+		sourceColumn: ticket_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: string
+		lineageTag: 095abd61-5865-4784-8ea6-ae8bd54acc9e
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 282e5698-ad3d-496d-9a4c-cb571b8fd8b2
+		summarizeBy: none
+		sourceColumn: created_at
+
+		variation Variation
+			isDefault
+			relationship: 15c561e3-8d7f-4199-9e3c-4f30dfaf376d
+			defaultHierarchy: LocalDateTable_97951f58-6708-4bfb-b245-b71fe0c59936.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cc2ca848-65ee-4e74-b8a9-f719609aa904
+		summarizeBy: none
+		sourceColumn: created_date
+
+		variation Variation
+			isDefault
+			relationship: c510d332-48b9-4554-b93e-d7695f672d69
+			defaultHierarchy: LocalDateTable_299d9714-4782-445f-a1f6-71391a30c0fd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column issue_category
+		dataType: string
+		lineageTag: bb5767d4-be0a-4715-b9a4-cac99bfc8e95
+		summarizeBy: none
+		sourceColumn: issue_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column channel
+		dataType: string
+		lineageTag: a944893c-184a-4a7d-ad0e-d3456f1d65cb
+		summarizeBy: none
+		sourceColumn: channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column priority
+		dataType: string
+		lineageTag: 581ba4cf-e4eb-4d2f-b2bf-59fbb99244c6
+		summarizeBy: none
+		sourceColumn: priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column assigned_agent_id
+		dataType: string
+		lineageTag: 98e49d1a-4525-4275-9109-bec98dd08e9c
+		summarizeBy: none
+		sourceColumn: assigned_agent_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column agent_first_response_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 96bd160d-27b4-4f2a-8701-6a9eb2512914
+		summarizeBy: none
+		sourceColumn: agent_first_response_at
+
+		variation Variation
+			isDefault
+			relationship: af971206-4ed4-426f-bb9e-88e674c5f66e
+			defaultHierarchy: LocalDateTable_1a37f11f-0448-4e93-8459-33e4470eb01f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_response_hours
+		dataType: double
+		lineageTag: c8f64769-e9dc-4464-9c02-43926e2cc717
+		summarizeBy: sum
+		sourceColumn: first_response_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column resolved_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a32537b6-5a88-4828-bd39-c4cbb512c96f
+		summarizeBy: none
+		sourceColumn: resolved_at
+
+		variation Variation
+			isDefault
+			relationship: ab98041e-25c9-4f02-a2ca-129778dd1e8a
+			defaultHierarchy: LocalDateTable_1c7b97c9-86da-45d2-ae1b-b0fcff19d7e0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolution_hours
+		dataType: double
+		lineageTag: fe253539-58b3-4e51-a1ac-2442f16a3cd9
+		summarizeBy: sum
+		sourceColumn: resolution_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column first_resolved_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 87ff23a8-ee72-4c97-ac1d-1fa15f63c48f
+		summarizeBy: none
+		sourceColumn: first_resolved_at
+
+		variation Variation
+			isDefault
+			relationship: c30ae5f1-a283-46eb-acb9-5f3050aa5c25
+			defaultHierarchy: LocalDateTable_f699dac5-6148-4b81-b007-cacd72c78a3e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_resolved_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9c0d5ea0-f7d8-4e5f-bee8-904435e26101
+		summarizeBy: none
+		sourceColumn: last_resolved_at
+
+		variation Variation
+			isDefault
+			relationship: 6370b030-7a31-42b3-bcc9-a071fdbefd0b
+			defaultHierarchy: LocalDateTable_5f0259d6-4f6a-4dc6-bb98-2285aad24d85.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_resolution_hours
+		dataType: double
+		lineageTag: cdf19359-ccdd-4304-b0ea-cbb891391294
+		summarizeBy: sum
+		sourceColumn: last_resolution_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column reopened_flag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 91379c4c-5c33-4456-ac88-a3c8921e0a52
+		summarizeBy: none
+		sourceColumn: reopened_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column reopen_count
+		dataType: int64
+		formatString: 0
+		lineageTag: e2d5d8d6-bc97-4f6b-87ad-7edd641cc8b8
+		summarizeBy: sum
+		sourceColumn: reopen_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolution_actor_type
+		dataType: string
+		lineageTag: 51f815fa-66be-4875-9195-bd7924d05353
+		summarizeBy: none
+		sourceColumn: resolution_actor_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column missing_agent_response_flag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9511add0-dcab-47ad-a12c-f1c7ebc23cb5
+		summarizeBy: none
+		sourceColumn: missing_agent_response_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Resolution Status' =
+			
+			IF(
+			    ISBLANK(fct_tickets[last_resolved_at]),
+			    "Unresolved",
+			    "Resolved"
+			)
+		lineageTag: df48af73-b425-4d39-9f83-f4d57f1daf24
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ticket Group' = "All Tickets"
+		lineageTag: bc852852-b57a-4916-a344-59d09e1caf3d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fct_tickets = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(
+				        File.Contents("C:\Users\griciurz\gamehub-analytics\data\exports\fct_tickets.parquet"),
+				        [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]
+				    )
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,92 @@
+table mart_support_by_channel
+	lineageTag: c318e710-e7a1-4146-8894-3f75cad2439a
+
+	column channel
+		dataType: string
+		lineageTag: cf434338-d26a-41e4-86ac-e08a9792de83
+		summarizeBy: none
+		sourceColumn: channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: d6e740ce-f52d-4dcb-91b1-b4709135c8ae
+		summarizeBy: sum
+		sourceColumn: total_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolved_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: b1a4f19f-afa7-4b65-aafb-44dec76aa429
+		summarizeBy: sum
+		sourceColumn: resolved_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_response_hours
+		dataType: double
+		lineageTag: dc0ee68e-12ae-43d4-9cf5-c025cab5a5d8
+		summarizeBy: sum
+		sourceColumn: avg_response_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_resolution_time
+		dataType: double
+		lineageTag: 3371c219-adf2-4471-a704-c95726a662d2
+		summarizeBy: sum
+		sourceColumn: avg_resolution_time
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_last_resolution_hours
+		dataType: double
+		lineageTag: 4cf2dc25-3d09-40e6-9492-f2078b8eb18c
+		summarizeBy: sum
+		sourceColumn: avg_last_resolution_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bot_resolved_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c6810ee-125d-4832-92b2-2ee04a067eec
+		summarizeBy: sum
+		sourceColumn: bot_resolved_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column reopened_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: db04e271-f86e-4a17-9f34-5fd342cf559c
+		summarizeBy: sum
+		sourceColumn: reopened_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mart_support_by_channel = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(
+				        File.Contents("C:\Users\griciurz\gamehub-analytics\data\exports\mart_support_by_channel.parquet"),
+				        [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]
+				    )
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

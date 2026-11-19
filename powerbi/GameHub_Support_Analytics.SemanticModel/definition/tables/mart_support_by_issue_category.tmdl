@@ -1,0 +1,102 @@
+table mart_support_by_issue_category
+	lineageTag: 535c5ec5-4caf-47bb-a56e-ce30d4342050
+
+	column issue_category
+		dataType: string
+		lineageTag: e026bcca-0642-4c26-92b4-f5d31dd886f3
+		summarizeBy: none
+		sourceColumn: issue_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: ccd93e43-d254-4424-98fa-2c14d1eb8e39
+		summarizeBy: sum
+		sourceColumn: total_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolved_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: b45c9b5e-feff-419e-9006-a75743992b57
+		summarizeBy: sum
+		sourceColumn: resolved_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_first_response_hours
+		dataType: double
+		lineageTag: 5c8f81e0-41de-46c6-9258-f29a81c7e105
+		summarizeBy: sum
+		sourceColumn: avg_first_response_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_first_resolution_hours
+		dataType: double
+		lineageTag: 011de32c-7c77-4fc6-9472-8f34727b75d5
+		summarizeBy: sum
+		sourceColumn: avg_first_resolution_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_last_resolution_hours
+		dataType: double
+		lineageTag: 1c79ecdf-98c1-4b66-a570-c8e82b0366f9
+		summarizeBy: sum
+		sourceColumn: avg_last_resolution_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bot_resolved_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: fb71a41d-2340-40a8-9bf5-861532a5e2bd
+		summarizeBy: sum
+		sourceColumn: bot_resolved_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column reopened_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: c8ff77fd-5ede-4d60-becf-ccb32f0b7332
+		summarizeBy: sum
+		sourceColumn: reopened_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column reopening_rate
+		dataType: double
+		lineageTag: 816c7042-fcd0-4b44-8214-22f2b0b35451
+		summarizeBy: sum
+		sourceColumn: reopening_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition mart_support_by_issue_category = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(
+				        File.Contents("C:\Users\griciurz\gamehub-analytics\data\exports\mart_support_by_issue_category.parquet"),
+				        [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]
+				    )
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

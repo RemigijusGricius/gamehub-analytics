@@ -1,0 +1,33 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["dim_customers","fct_tickets","mart_support_by_channel","mart_support_by_issue_category","mart_support_by_priority","mart_support_kpis"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_customers
+ref table DateTableTemplate_7785f6d4-9ae8-42a9-9532-09cb2d52ecd3
+ref table LocalDateTable_73dae277-61a4-44ae-bd6c-eea2e963006b
+ref table fct_tickets
+ref table LocalDateTable_97951f58-6708-4bfb-b245-b71fe0c59936
+ref table LocalDateTable_299d9714-4782-445f-a1f6-71391a30c0fd
+ref table LocalDateTable_1a37f11f-0448-4e93-8459-33e4470eb01f
+ref table LocalDateTable_1c7b97c9-86da-45d2-ae1b-b0fcff19d7e0
+ref table LocalDateTable_f699dac5-6148-4b81-b007-cacd72c78a3e
+ref table LocalDateTable_5f0259d6-4f6a-4dc6-bb98-2285aad24d85
+ref table mart_support_by_channel
+ref table mart_support_by_issue_category
+ref table mart_support_by_priority
+ref table mart_support_kpis
+ref table _Measures
+
+ref cultureInfo en-US
+
