@@ -42,3 +42,16 @@ jobs:
             --project-dir gamehub_dbt \
             --profiles-dir gamehub_dbt \
             --profile gamehub_dbt
+
+      - name: Export Gold tables
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: python scripts/export_gold.py
+
+      - name: Publish Gold artifacts
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: gamehub-gold-tables
+          path: data/exports/*.parquet
+          if-no-files-found: error
+          retention-days: 30
