@@ -50,7 +50,19 @@ ROUND(
         ), 0
     ),
     2
-) AS missing_agent_response_rate
+) AS missing_agent_response_rate,
+
+ROUND(
+    COUNT(*) FILTER (
+        WHERE resolution_actor_type = 'agent'
+    ) * 100.0
+    / NULLIF(
+        COUNT(*) FILTER (
+            WHERE resolution_actor_type IS NOT NULL
+        ), 0
+    ),
+    2
+) AS agent_resolution_rate
 FROM {{ ref('fct_tickets')}}
 
 
