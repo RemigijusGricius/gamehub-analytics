@@ -4,6 +4,6 @@ gamehub_dbt:
   outputs:
     dev:
       type: duckdb
-      path: '../gamehub.duckdb'
+      path: "{{ env_var('GAMEHUB_DB_PATH') }}"
       schema: main
       threads: 1

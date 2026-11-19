@@ -11,6 +11,9 @@ jobs:
   validate:
     runs-on: ubuntu-latest
 
+    env:
+      GAMEHUB_DB_PATH: ${{ github.workspace }}/gamehub.duckdb
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -25,6 +28,10 @@ jobs:
 
       - name: Ingest Bronze data
         run: python scripts/ingest_bronze.py
+
+      - name: Verify Bronze ingestion
+        run: |
+          python -c "import duckdb; con = duckdb.connect('gamehub.duckdb'); print(con.execute('SELECT COUNT(*) FROM bronze.tickets').fetchone())"
 
       - name: Prepare dbt profile
         run: cp gamehub_dbt/profiles.ci.yml gamehub_dbt/profiles.yml
