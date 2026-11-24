@@ -11259,82 +11259,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.measure": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Measure"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "measure": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "degree": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "quota": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "extent": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "portion": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "ration": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "size": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        }
-			      ]
-			    },
 			    "entity__measure.agent_resolution_rate_rank": {
 			      "Definition": {
 			        "Binding": {
@@ -12058,9 +11982,2219 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__measure.monthly_total_tickets": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Monthly Total Tickets"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monthly total tickets": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tickets": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "monthly aggregate ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "monthly overall ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "monthly total coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "monthly total permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "monthly total voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "monthly total receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "monthly total marker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "monthly total sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "Total Tickets": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.monthly_resolved_tickets": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Monthly Resolved Tickets"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monthly resolved tickets": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "monthly resolved coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "monthly resolved permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "monthly resolved voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "monthly resolved receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "monthly resolved marker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "monthly resolved sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "monthly resolved label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "monthly resolved tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "monthly resolved tab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "monthly resolved docket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "Resolved Tickets": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.monthly_unresolved_tickets": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Monthly Unresolved Tickets"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monthly unresolved tickets": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "monthly unresolved coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "monthly unresolved permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "monthly unresolved voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "monthly unresolved receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "monthly unresolved marker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "monthly unresolved sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "monthly unresolved label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "monthly unresolved tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "monthly unresolved tab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "monthly unresolved docket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "Unresolved Tickets": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.monthly_resolution_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Monthly Resolution Rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monthly resolution rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "monthly resolution degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "monthly resolution frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "monthly resolution percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "monthly resolution ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "monthly resolution quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "monthly resolution amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "monthly resolution proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "monthly resolution speed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "monthly resolution level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "monthly resolution scale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "Resolution Rate": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.monthly_avg_first_response_hours": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Monthly Avg First Response Hours"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monthly avg first response hours": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "monthly average first response hour": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "monthly avg first response period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "monthly avg first response eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "monthly avg first response epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "monthly avg first response age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "Avg Response (h)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.monthly_avg_resolution_hours": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Monthly Avg Resolution Hours"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monthly avg resolution hours": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "monthly average resolution hour": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "monthly avg resolution period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "monthly avg resolution eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "monthly avg resolution epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "monthly avg resolution age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "Avg Resolution (h)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mart agent monthly performance": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mart_agent_monthly_performance": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "performance": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "monthly performance": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "agent monthly performance": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "mart agent monthly presentation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "mart agent monthly recital": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "mart agent monthly enactment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "agent monthly presentation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "agent monthly recital": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "agent monthly enactment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "monthly presentation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "monthly recital": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "monthly enactment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "mart agent monthly act": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance.performance_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "ConceptualProperty": "performance_month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "performance month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "performance_month": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "performance mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mart_agent_monthly_performance.performance_month.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "VariationSource": "performance_month",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "performance month date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "month date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mart_agent_monthly_performance.performance_month.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "VariationSource": "performance_month",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "performance month year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "performance month yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "month yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "performance mth year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "mth year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mart_agent_monthly_performance.performance_month.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "VariationSource": "performance_month",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "performance month quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "performance month qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "month qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "performance mth quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "mth quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mart_agent_monthly_performance.performance_month.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "VariationSource": "performance_month",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "performance month month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "performance month mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "month mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "performance mth month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "mth month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mart_agent_monthly_performance.performance_month.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "VariationSource": "performance_month",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "performance month day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "performance mth day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "mth day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mart_agent_monthly_performance.assigned_agent_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "ConceptualProperty": "assigned_agent_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "assigned agent id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "assigned_agent_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "agent": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "agent id": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "assigned agent identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "assigned agent identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "assigned agent identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "agent identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "agent identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "agent identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "assigned agent credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "agent credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "manager": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "mediator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance.total_ticket": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "ConceptualProperty": "total_tickets"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total ticket": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_tickets": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ticket": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "total coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "total permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance.resolved_ticket": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "ConceptualProperty": "resolved_tickets"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "resolved ticket": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "resolved_tickets": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ticket": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "resolved coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "resolved permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "resolved voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "resolved receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "resolved marker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "resolved sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance.unresolved_ticket": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "ConceptualProperty": "unresolved_tickets"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unresolved ticket": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "unresolved_tickets": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ticket": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "unresolved coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "unresolved permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "unresolved voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "unresolved receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "unresolved marker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "unresolved sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance.avg_resolution_hour": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "ConceptualProperty": "avg_resolution_hours"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg resolution hour": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "avg_resolution_hours": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "average resolution hour": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "avg resolution period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "avg resolution era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "avg resolution epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "avg resolution age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance.avg_first_response_hour": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "ConceptualProperty": "avg_first_response_hours"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg first response hour": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "avg_first_response_hours": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "average first response hour": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "avg first response period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "avg first response era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "avg first response epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "avg first response age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance.resolution_rate_pct": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "ConceptualProperty": "resolution_rate_pct"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "resolution rate pct": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "resolution_rate_pct": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance.first_response_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "ConceptualProperty": "first_response_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "first response count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "first_response_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "response count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "first response amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "response amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance.resolution_time_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mart_agent_monthly_performance",
+			          "ConceptualProperty": "resolution_time_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "resolution time count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "resolution_time_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "time count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "resolution time amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "time amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "resolution duration count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "resolution interval count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "resolution moment count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "duration count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "interval count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "moment count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "resolution period count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "resolution timetable count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "mart_agent_monthly_performance_performance_month_date_hierarchy_has_mart_agent_monthly_performance_performance_month_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance.performance_month.date_hierarchy": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.performance_month.date_hierarchy"
+			          }
+			        },
+			        "mart_agent_monthly_performance.performance_month.quarter": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.performance_month.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance.performance_month.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "mart_agent_monthly_performance.performance_month.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "performance_month_date_hierarchies_have_performance_month_quarters"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_performance_month_date_hierarchy_has_mart_agent_monthly_performance_performance_month_year": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance.performance_month.date_hierarchy": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.performance_month.date_hierarchy"
+			          }
+			        },
+			        "mart_agent_monthly_performance.performance_month.year": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.performance_month.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance.performance_month.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "mart_agent_monthly_performance.performance_month.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "performance_month_date_hierarchies_have_performance_month_years"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_performance_month_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance.performance_month": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.performance_month"
+			          }
+			        },
+			        "mart_agent_monthly_performance.performance_month.date_hierarchy": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.performance_month.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance.performance_month"
+			            },
+			            "Object": {
+			              "Role": "mart_agent_monthly_performance.performance_month.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "performance_months_have_performance_month_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "fct_ticket_last_resolved_at_date_hierarchy_has_fct_ticket_last_resolved_at_day": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_tickets"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_ticket.last_resolved_at.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fct_ticket.last_resolved_at.date_hierarchy"
+			          }
+			        },
+			        "fct_ticket.last_resolved_at.day": {
+			          "Target": {
+			            "Entity": "fct_ticket.last_resolved_at.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_ticket.last_resolved_at.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fct_ticket.last_resolved_at.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_resolved_at_date_hierarchy_have_last_resolved_at_day"
+			        }
+			      ]
+			    },
+			    "fct_ticket_last_resolved_at_date_hierarchy_has_fct_ticket_last_resolved_at_month": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_tickets"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_ticket.last_resolved_at.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fct_ticket.last_resolved_at.date_hierarchy"
+			          }
+			        },
+			        "fct_ticket.last_resolved_at.month": {
+			          "Target": {
+			            "Entity": "fct_ticket.last_resolved_at.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_ticket.last_resolved_at.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fct_ticket.last_resolved_at.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_resolved_at_date_hierarchy_have_last_resolved_at_month"
+			        }
+			      ]
+			    },
 			    "fct_ticket_last_resolved_at_date_hierarchy_has_fct_ticket_last_resolved_at_quarter": {
 			      "Binding": {
 			        "ConceptualEntity": "fct_tickets"
@@ -13150,6 +15284,59 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "mart_agent_monthly_performance_has_mart_agent_performance": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "mart_agent_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_performance"
+			          },
+			          "Nouns": [
+			            {
+			              "agent": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "mart_agent_performance"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_mart_agent_performances"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_performance"
+			            },
+			            "Object": {
+			              "Role": "mart_agent_monthly_performance"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_performances_have_mart_agent_monthly_performances"
+			        }
+			      ]
+			    },
 			    "fct_ticket_has_mart_agent_performance": {
 			      "Binding": {
 			        "ConceptualEntity": "fct_tickets"
@@ -13246,6 +15433,501 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_customers_have_fct_tickets"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_resolution_time_count": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "mart_agent_monthly_performance.resolution_time_count": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.resolution_time_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "mart_agent_monthly_performance.resolution_time_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_resolution_time_counts"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_first_response_count": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "mart_agent_monthly_performance.first_response_count": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.first_response_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "mart_agent_monthly_performance.first_response_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_first_response_counts"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_resolution_rate_pct": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "mart_agent_monthly_performance.resolution_rate_pct": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.resolution_rate_pct"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "mart_agent_monthly_performance.resolution_rate_pct"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_resolution_rate_pcts"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_avg_first_response_hour": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "mart_agent_monthly_performance.avg_first_response_hour": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.avg_first_response_hour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "mart_agent_monthly_performance.avg_first_response_hour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_avg_first_response_hours"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_avg_resolution_hour": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "mart_agent_monthly_performance.avg_resolution_hour": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.avg_resolution_hour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "mart_agent_monthly_performance.avg_resolution_hour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_avg_resolution_hours"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_unresolved_ticket": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "mart_agent_monthly_performance.unresolved_ticket": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.unresolved_ticket"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "mart_agent_monthly_performance.unresolved_ticket"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_unresolved_tickets"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_resolved_ticket": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "mart_agent_monthly_performance.resolved_ticket": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.resolved_ticket"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "mart_agent_monthly_performance.resolved_ticket"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_resolved_tickets"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_total_ticket": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "mart_agent_monthly_performance.total_ticket": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.total_ticket"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "mart_agent_monthly_performance.total_ticket"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_total_tickets"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_performance_month": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "mart_agent_monthly_performance.performance_month": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance.performance_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "mart_agent_monthly_performance.performance_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_performance_months"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_entity__measure_monthly_avg_resolution_hours": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "entity__measure.monthly_avg_resolution_hours": {
+			          "Target": {
+			            "Entity": "entity__measure.monthly_avg_resolution_hours"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.monthly_avg_resolution_hours"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_monthly_avg_resolution_hours"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_entity__measure_monthly_avg_first_response_hours": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "entity__measure.monthly_avg_first_response_hours": {
+			          "Target": {
+			            "Entity": "entity__measure.monthly_avg_first_response_hours"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.monthly_avg_first_response_hours"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_monthly_avg_first_response_hours"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_entity__measure_monthly_resolution_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "entity__measure.monthly_resolution_rate": {
+			          "Target": {
+			            "Entity": "entity__measure.monthly_resolution_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.monthly_resolution_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_monthly_resolution_rate"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_entity__measure_monthly_unresolved_tickets": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "entity__measure.monthly_unresolved_tickets": {
+			          "Target": {
+			            "Entity": "entity__measure.monthly_unresolved_tickets"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.monthly_unresolved_tickets"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_monthly_unresolved_tickets"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_entity__measure_monthly_resolved_tickets": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "entity__measure.monthly_resolved_tickets": {
+			          "Target": {
+			            "Entity": "entity__measure.monthly_resolved_tickets"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.monthly_resolved_tickets"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_monthly_resolved_tickets"
+			        }
+			      ]
+			    },
+			    "mart_agent_monthly_performance_has_entity__measure_monthly_total_tickets": {
+			      "Binding": {
+			        "ConceptualEntity": "mart_agent_monthly_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mart_agent_monthly_performance": {
+			          "Target": {
+			            "Entity": "mart_agent_monthly_performance"
+			          }
+			        },
+			        "entity__measure.monthly_total_tickets": {
+			          "Target": {
+			            "Entity": "entity__measure.monthly_total_tickets"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mart_agent_monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.monthly_total_tickets"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mart_agent_monthly_performances_have_monthly_total_tickets"
 			        }
 			      ]
 			    },
@@ -13477,39 +16159,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "Phrasing_measures_have_agent_resolution_rate_rank"
-			        }
-			      ]
-			    },
-			    "entity__measure_has_measure": {
-			      "Binding": {
-			        "ConceptualEntity": "_Measures"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity__measure": {
-			          "Target": {
-			            "Entity": "entity__measure"
-			          }
-			        },
-			        "entity__measure.measure": {
-			          "Target": {
-			            "Entity": "entity__measure.measure"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity__measure"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.measure"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing_measures_have_measure"
 			        }
 			      ]
 			    },
@@ -16335,20 +18984,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fct_ticket_last_resolved_at_date_hierarchy_has_fct_ticket_last_resolved_at_month": {
+			    "mart_agent_monthly_performance_performance_month_date_hierarchy_has_mart_agent_monthly_performance_performance_month_month": {
 			      "Binding": {
-			        "ConceptualEntity": "fct_tickets"
+			        "ConceptualEntity": "mart_agent_monthly_performance"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fct_ticket.last_resolved_at.date_hierarchy": {
+			        "mart_agent_monthly_performance.performance_month.date_hierarchy": {
 			          "Target": {
-			            "Entity": "fct_ticket.last_resolved_at.date_hierarchy"
+			            "Entity": "mart_agent_monthly_performance.performance_month.date_hierarchy"
 			          }
 			        },
-			        "fct_ticket.last_resolved_at.month": {
+			        "mart_agent_monthly_performance.performance_month.month": {
 			          "Target": {
-			            "Entity": "fct_ticket.last_resolved_at.month"
+			            "Entity": "mart_agent_monthly_performance.performance_month.month"
 			          }
 			        }
 			      },
@@ -16356,32 +19005,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fct_ticket.last_resolved_at.date_hierarchy"
+			              "Role": "mart_agent_monthly_performance.performance_month.date_hierarchy"
 			            },
 			            "Object": {
-			              "Role": "fct_ticket.last_resolved_at.month"
+			              "Role": "mart_agent_monthly_performance.performance_month.month"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "last_resolved_at_date_hierarchy_have_last_resolved_at_month"
+			          "ID": "performance_month_date_hierarchies_have_performance_month_months"
 			        }
 			      ]
 			    },
-			    "fct_ticket_last_resolved_at_date_hierarchy_has_fct_ticket_last_resolved_at_day": {
+			    "mart_agent_monthly_performance_performance_month_date_hierarchy_has_mart_agent_monthly_performance_performance_month_day": {
 			      "Binding": {
-			        "ConceptualEntity": "fct_tickets"
+			        "ConceptualEntity": "mart_agent_monthly_performance"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fct_ticket.last_resolved_at.date_hierarchy": {
+			        "mart_agent_monthly_performance.performance_month.date_hierarchy": {
 			          "Target": {
-			            "Entity": "fct_ticket.last_resolved_at.date_hierarchy"
+			            "Entity": "mart_agent_monthly_performance.performance_month.date_hierarchy"
 			          }
 			        },
-			        "fct_ticket.last_resolved_at.day": {
+			        "mart_agent_monthly_performance.performance_month.day": {
 			          "Target": {
-			            "Entity": "fct_ticket.last_resolved_at.day"
+			            "Entity": "mart_agent_monthly_performance.performance_month.day"
 			          }
 			        }
 			      },
@@ -16389,15 +19038,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fct_ticket.last_resolved_at.date_hierarchy"
+			              "Role": "mart_agent_monthly_performance.performance_month.date_hierarchy"
 			            },
 			            "Object": {
-			              "Role": "fct_ticket.last_resolved_at.day"
+			              "Role": "mart_agent_monthly_performance.performance_month.day"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "last_resolved_at_date_hierarchy_have_last_resolved_at_day"
+			          "ID": "performance_month_date_hierarchies_have_performance_month_days"
 			        }
 			      ]
 			    }

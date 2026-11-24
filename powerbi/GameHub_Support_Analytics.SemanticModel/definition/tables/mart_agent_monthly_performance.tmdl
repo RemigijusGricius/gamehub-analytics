@@ -1,0 +1,117 @@
+table mart_agent_monthly_performance
+	lineageTag: edac5b47-12df-4189-a7a8-0e96aa55615b
+
+	column performance_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e5dbf2e5-065a-4961-ab00-1b4a5986c0a8
+		summarizeBy: none
+		sourceColumn: performance_month
+
+		variation Variation
+			isDefault
+			relationship: 827e55b2-654b-4581-8c0b-3d1d7741d201
+			defaultHierarchy: LocalDateTable_594d37e6-9c4a-41fc-80d9-ac87ca6638ac.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column assigned_agent_id
+		dataType: string
+		lineageTag: 148547d5-7da2-436d-861e-5e094d0825e0
+		summarizeBy: none
+		sourceColumn: assigned_agent_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: 5aa0ef5a-7fbb-4458-bc74-903e9a173cba
+		summarizeBy: sum
+		sourceColumn: total_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolved_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: 4dba3003-7f03-495b-8fdd-7c7e772a2358
+		summarizeBy: sum
+		sourceColumn: resolved_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column unresolved_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: a8868268-f0ce-4f65-aa03-c235adeadeae
+		summarizeBy: sum
+		sourceColumn: unresolved_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_resolution_hours
+		dataType: double
+		lineageTag: 04c8e554-7d32-4a78-8e09-505d33b12891
+		summarizeBy: sum
+		sourceColumn: avg_resolution_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_first_response_hours
+		dataType: double
+		lineageTag: cca486f6-4442-4bd4-9161-1add03b23375
+		summarizeBy: sum
+		sourceColumn: avg_first_response_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column resolution_rate_pct
+		dataType: double
+		lineageTag: 45c20cbe-894c-4d7d-b2e7-341b8488b6c5
+		summarizeBy: sum
+		sourceColumn: resolution_rate_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column first_response_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 098d6216-c6ab-4cda-aa53-8399ca13a15a
+		summarizeBy: sum
+		sourceColumn: first_response_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolution_time_count
+		dataType: int64
+		formatString: 0
+		lineageTag: c31d3f45-ae6f-4945-86aa-6e98f1bde227
+		summarizeBy: sum
+		sourceColumn: resolution_time_count
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mart_agent_monthly_performance = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(
+				        File.Contents("C:\Users\griciurz\gamehub-analytics\data\exports\mart_agent_monthly_performance.parquet"),
+				        [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]
+				    )
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

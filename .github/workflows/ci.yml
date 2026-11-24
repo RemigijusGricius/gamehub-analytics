@@ -35,6 +35,11 @@ jobs:
 
       - name: Prepare dbt profile
         run: cp gamehub_dbt/profiles.ci.yml gamehub_dbt/profiles.yml
+        
+      - name: Install dbt packages
+        working-directory: gamehub_dbt
+        run: dbt deps
+
 
       - name: Build and test dbt models
         run: |

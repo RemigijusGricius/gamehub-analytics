@@ -12,7 +12,8 @@ GOLD_TABLES = [
     "mart_support_by_channel",
     "mart_support_by_issue_category",
     "mart_support_by_priority",
-    "mart_agent_performance"
+    "mart_agent_performance",
+    "mart_agent_monthly_performance"
 ]
 
 def main():

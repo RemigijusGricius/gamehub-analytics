@@ -1,0 +1,66 @@
+
+version: 2
+
+models:
+  - name: mart_agent_monthly_performance
+    description: "Support performance metrics aggregated by assigned agent and ticket creation month. One row per agent per month."
+    tests:
+    - dbt_utils.unique_combination_of_columns:
+        arguments:
+          combination_of_columns:
+            - performance_month
+            - assigned_agent_id
+
+    columns:
+      - name: performance_month
+        description: "First day of the ticket creation month."
+        data_tests:
+          - not_null
+
+      - name: assigned_agent_id
+        description: "ID of the assigned agent."
+        data_tests:
+          - not_null
+
+      - name: total_tickets
+        description: "Number of tickets assigned to the agent."
+        data_tests:
+          - not_null
+
+      - name: resolved_tickets
+        description: "Number of assigned tickets with a recorded resolution."
+        data_tests:
+          - not_null
+
+      - name: unresolved_tickets
+        description: "Number of tickets assigned to the agent but not yet resolved."
+        data_tests:
+          - not_null
+
+      - name: avg_resolution_hours
+        description: "Average time (in hours) between ticket creation and resolution."
+
+
+      - name: avg_first_response_hours
+        description: "Average time (in hours) between ticket creation and first response."
+
+
+      - name: resolution_rate_pct
+        description: "Percentage of assigned tickets with a recorded resolution, expressed on a 0–100 scale."
+        data_tests:
+          - not_null   
+
+      - name: first_response_count
+        description: "Number of assigned tickets with a non-NULL first response duration."
+        data_tests:
+          - not_null   
+
+
+      - name: resolution_time_count
+        description: "Number of assigned tickets with a non-NULL resolution duration."
+        data_tests:
+          - not_null        
+
+
+
+
