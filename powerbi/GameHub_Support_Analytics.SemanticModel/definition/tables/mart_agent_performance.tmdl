@@ -1,0 +1,75 @@
+table mart_agent_performance
+	lineageTag: 3d546314-2010-4762-84d9-bfdf1cc58370
+
+	column assigned_agent_id
+		dataType: string
+		lineageTag: 22875d31-17d1-4dd4-b31b-8733ee1ba406
+		summarizeBy: none
+		sourceColumn: assigned_agent_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_tickets
+		dataType: int64
+		formatString: 0
+		lineageTag: 4be291ba-710e-4e3d-b7f3-cc05d14e8a38
+		summarizeBy: none
+		sourceColumn: total_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolved_tickets
+		dataType: double
+		lineageTag: 5a120fd2-5560-4c1a-81ba-486dd9af5c63
+		summarizeBy: none
+		sourceColumn: resolved_tickets
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column resolution_rate_pct
+		dataType: double
+		lineageTag: 155efd47-fcc2-472b-9115-79c752bc3223
+		summarizeBy: none
+		sourceColumn: resolution_rate_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_first_response_hours
+		dataType: double
+		lineageTag: d34df093-8dc3-4bf5-baf3-c8abd14234c0
+		summarizeBy: none
+		sourceColumn: avg_first_response_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_resolution_hours
+		dataType: double
+		lineageTag: 5d114c89-dc0d-4e59-975a-81cbf26f8656
+		summarizeBy: none
+		sourceColumn: avg_resolution_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition mart_agent_performance = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(
+				        File.Contents("C:\Users\griciurz\gamehub-analytics\data\exports\mart_agent_performance.parquet"),
+				        [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]
+				    )
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

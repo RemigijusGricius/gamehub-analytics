@@ -1,0 +1,36 @@
+
+version: 2
+
+models:
+  - name: mart_agent_performance
+    description: "Support performance metrics aggregated by agent. One row per agent."
+
+    columns:
+      - name: assigned_agent_id
+        description: "ID of the assigned agent."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: total_tickets
+        description: "Number of tickets assigned to the agent."
+        data_tests:
+          - not_null
+
+      - name: resolved_tickets
+        description: "Number of tickets with at least one resolution event."
+        data_tests:
+          - not_null
+
+      - name: resolution_rate_pct
+        description: "Percentage of tickets resolved by the agent."
+        data_tests:
+          - not_null
+
+      - name: avg_first_response_hours
+        description: "Average time (in hours) between ticket creation and first response."
+
+
+      - name: avg_resolution_hours
+        description: "Average time (in hours) between ticket creation and resolution."
+

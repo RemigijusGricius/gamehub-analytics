@@ -1,0 +1,112 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "9dfc1c076383aef9feaa",
+  "position": {
+    "x": 21.666666666666668,
+    "y": 853.33333333333337,
+    "z": 16005,
+    "height": 226.66666666666669,
+    "width": 1876.6666666666667,
+    "tabOrder": 16005
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mart_agent_performance"
+                    }
+                  },
+                  "Property": "assigned_agent_id"
+                }
+              },
+              "queryRef": "mart_agent_performance.assigned_agent_id",
+              "nativeQueryRef": "Agent",
+              "displayName": "Agent"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Total Assigned Tickets"
+                }
+              },
+              "queryRef": "_Measures.Total Assigned Tickets",
+              "nativeQueryRef": "Total Tickets",
+              "displayName": "Total Tickets"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Total Resolved Tickets"
+                }
+              },
+              "queryRef": "_Measures.Total Resolved Tickets",
+              "nativeQueryRef": "Total Resolved Tickets"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Resolution Rate %"
+                }
+              },
+              "queryRef": "_Measures.Resolution Rate %",
+              "nativeQueryRef": "Resolution Rate %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Avg First Response Hours"
+                }
+              },
+              "queryRef": "_Measures.Avg First Response Hours",
+              "nativeQueryRef": "Avg Response (h)",
+              "displayName": "Avg Response (h)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Avg Resolution Hours"
+                }
+              },
+              "queryRef": "_Measures.Avg Resolution Hours",
+              "nativeQueryRef": "Avg Resolution (h)",
+              "displayName": "Avg Resolution (h)"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

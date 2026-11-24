@@ -9,7 +9,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["dim_customers","fct_tickets","mart_support_by_channel","mart_support_by_issue_category","mart_support_by_priority","mart_support_kpis"]
+annotation PBI_QueryOrder = ["dim_customers","fct_tickets","mart_support_by_channel","mart_support_by_issue_category","mart_support_by_priority","mart_support_kpis","mart_agent_performance"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -28,6 +28,7 @@ ref table mart_support_by_issue_category
 ref table mart_support_by_priority
 ref table mart_support_kpis
 ref table _Measures
+ref table mart_agent_performance
 
 ref cultureInfo en-US
 
