@@ -41,3 +41,12 @@ relationship AutoDetected_ff1548b4-317a-4d09-87f1-1706f28344e6
 	fromColumn: fct_tickets.assigned_agent_id
 	toColumn: mart_agent_performance.assigned_agent_id
 
+relationship 827e55b2-654b-4581-8c0b-3d1d7741d201
+	joinOnDateBehavior: datePartOnly
+	fromColumn: mart_agent_monthly_performance.performance_month
+	toColumn: LocalDateTable_594d37e6-9c4a-41fc-80d9-ac87ca6638ac.Date
+
+relationship AutoDetected_184e02b5-908e-497a-8429-58084a76eaa2
+	fromColumn: mart_agent_monthly_performance.assigned_agent_id
+	toColumn: mart_agent_performance.assigned_agent_id
+

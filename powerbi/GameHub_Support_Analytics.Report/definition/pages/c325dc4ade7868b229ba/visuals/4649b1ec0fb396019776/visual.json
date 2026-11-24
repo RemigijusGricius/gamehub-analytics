@@ -1,0 +1,186 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "4649b1ec0fb396019776",
+  "position": {
+    "x": 21.666666666666668,
+    "y": 875,
+    "z": 10002,
+    "height": 205,
+    "width": 1876.6666666666667,
+    "tabOrder": 10002
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mart_agent_monthly_performance"
+                    }
+                  },
+                  "Property": "assigned_agent_id"
+                }
+              },
+              "queryRef": "mart_agent_monthly_performance.assigned_agent_id",
+              "nativeQueryRef": "Agent",
+              "displayName": "Agent"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mart_agent_monthly_performance"
+                        }
+                      },
+                      "Property": "total_tickets"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(mart_agent_monthly_performance.total_tickets)",
+              "nativeQueryRef": "Tickets",
+              "displayName": "Tickets"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mart_agent_monthly_performance"
+                        }
+                      },
+                      "Property": "resolved_tickets"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(mart_agent_monthly_performance.resolved_tickets)",
+              "nativeQueryRef": "Resolved",
+              "displayName": "Resolved"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mart_agent_monthly_performance"
+                        }
+                      },
+                      "Property": "resolution_rate_pct"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(mart_agent_monthly_performance.resolution_rate_pct)",
+              "nativeQueryRef": "Resolution Rate",
+              "displayName": "Resolution Rate"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "mart_agent_monthly_performance"
+                      }
+                    },
+                    "Property": "resolution_rate_pct"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "157.99998834398184D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "mart_agent_monthly_performance.assigned_agent_id"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "169.6667114513897D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(mart_agent_monthly_performance.total_tickets)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "215.99986128386408D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(mart_agent_monthly_performance.resolved_tickets)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "208.66677163854612D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(mart_agent_monthly_performance.resolution_rate_pct)"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
