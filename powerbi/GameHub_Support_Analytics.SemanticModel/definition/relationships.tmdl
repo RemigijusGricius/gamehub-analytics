@@ -37,3 +37,7 @@ relationship AutoDetected_d5037d98-f23a-4ae5-badb-2ca31dc439dd
 	fromColumn: fct_tickets.customer_id
 	toColumn: dim_customers.customer_id
 
+relationship AutoDetected_ff1548b4-317a-4d09-87f1-1706f28344e6
+	fromColumn: fct_tickets.assigned_agent_id
+	toColumn: mart_agent_performance.assigned_agent_id
+

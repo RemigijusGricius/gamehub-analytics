@@ -4,10 +4,10 @@
   "position": {
     "x": 21.428571428571431,
     "y": 20,
-    "z": 9001,
+    "z": 10000,
     "height": 101.42857142857143,
     "width": 524.28571428571433,
-    "tabOrder": 10
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "textbox",
@@ -31,7 +31,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "CUSTUMOE SUPPORT OVERVIEW",
+                    "value": "CUSTUMER SUPPORT OVERVIEW",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "24pt",

@@ -43,10 +43,7 @@ table dim_customers
 		mode: import
 		source =
 				let
-				    Source = Parquet.Document(
-				        File.Contents("C:\Users\griciurz\gamehub-analytics\data\exports\dim_customers.parquet"),
-				        [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]
-				    )
+				    Source = Parquet.Document(File.Contents("C:\Users\griciurz\gamehub-analytics\data\exports\dim_customers.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
 				in
 				    Source
 

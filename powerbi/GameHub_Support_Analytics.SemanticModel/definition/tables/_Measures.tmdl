@@ -69,6 +69,127 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Total Agents' =
+			
+			DISTINCTCOUNT(mart_agent_performance[assigned_agent_id])
+		formatString: 0
+		lineageTag: 90fdf89e-03dc-4874-bd39-9bacb8d1bb64
+
+	measure 'Total Assigned Tickets' =
+			
+			SUM(mart_agent_performance[total_tickets])
+		formatString: 0
+		lineageTag: 0ef7b9c2-e003-4053-ae50-80156cc812ac
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Total Resolved Tickets' =
+			
+			SUM(mart_agent_performance[resolved_tickets])
+		formatString: 0
+		lineageTag: 162584f6-85a9-4600-ac66-d00cdb662e5e
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Total Unresolved Tickets' =
+			
+			[Total Assigned Tickets] - [Total Resolved Tickets]
+		lineageTag: 99b1b637-9c00-45a2-bd6e-37d347868b9a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Resolution Rate %' =
+			
+			DIVIDE(
+			    [Total Resolved Tickets],
+			    [Total Assigned Tickets]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 54b26d51-857f-4f9a-bfef-59c572bccbf5
+
+	measure 'Avg Tickets per Agent' =
+			
+			DIVIDE(
+			    [Total Assigned Tickets],
+			    [Total Agents]
+			)
+		formatString: 0
+		lineageTag: 00fe0054-7145-4553-8f34-ea0b6a460cc9
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Avg First Response Hours' =
+			
+			CALCULATE(
+			    AVERAGE(fct_tickets[first_response_hours]),
+			    KEEPFILTERS(
+			        TREATAS(
+			            VALUES(mart_agent_performance[assigned_agent_id]),
+			            fct_tickets[assigned_agent_id]
+			        )
+			    )
+			)
+		lineageTag: 1b6a13e8-d245-40d1-9861-58f28113bbcd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Resolution Hours' =
+			
+			CALCULATE(
+			    AVERAGE(fct_tickets[resolution_hours]),
+			    KEEPFILTERS(
+			        TREATAS(
+			            VALUES(mart_agent_performance[assigned_agent_id]),
+			            fct_tickets[assigned_agent_id]
+			        )
+			    )
+			)
+		lineageTag: 38a15659-f485-4ce1-b443-2f3152f17809
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Agent Workload Share %' =
+			
+			DIVIDE(
+			    [Total Assigned Tickets],
+			    CALCULATE(
+			        [Total Assigned Tickets],
+			        REMOVEFILTERS(mart_agent_performance[assigned_agent_id])
+			    )
+			)
+		lineageTag: a0356c97-e507-4e44-b428-704292b6b2d2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Agent Workload Rank' =
+			
+			RANKX(
+			    ALLSELECTED(mart_agent_performance[assigned_agent_id]),
+			    [Total Assigned Tickets],
+			    ,
+			    DESC,
+			    DENSE
+			)
+		formatString: 0
+		lineageTag: bab6d383-db0e-49e0-ac53-d0c658a4bfbb
+
+	measure Measure
+		lineageTag: 6e0e742e-e3ad-44f0-b03b-c1de9d2b5081
+
+		annotation 43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c = True
+
+	measure 'Agent Resolution Rate Rank' =
+			
+			RANKX(
+			    ALLSELECTED(mart_agent_performance[assigned_agent_id]),
+			    [Resolution Rate %],
+			    ,
+			    DESC,
+			    DENSE
+			)
+		formatString: 0
+		lineageTag: 8562c9fb-d044-416c-a8bc-aadf85e3af36
+
 	column Column
 		formatString: 0
 		lineageTag: a6ec5fee-0ab8-4d9c-afd7-ccd990eb6d71
