@@ -1,5 +1,45 @@
+{{ config(
+    materialized='incremental',
+    unique_key='ticket_id',
+    incremental_strategy='delete+insert'
+) }}
 
-{{ config(materialized='table') }}
+with event_ingestion as (
+
+    select
+        ticket_id,
+        max(pipeline_ingested_at) as latest_event_ingested_at
+
+    from {{ ref('stg_ticket_events') }}
+
+    group by ticket_id
+
+),
+
+tickets_to_process as (
+
+    select
+        t.*,
+        ei.latest_event_ingested_at
+
+    from {{ ref('stg_tickets') }} as t
+
+    left join event_ingestion as ei
+        on t.ticket_id = ei.ticket_id
+
+    {% if is_incremental() %}
+
+        left join {{ this }} as ft
+            on t.ticket_id = ft.ticket_id
+
+        where
+            ft.ticket_id is null
+            or t.ingested_at is distinct from ft.ticket_ingested_at
+            or ei.latest_event_ingested_at is distinct from ft.latest_event_ingested_at
+
+    {% endif %}
+
+)
 
 select
     t.ticket_id,
@@ -30,9 +70,12 @@ select
              and tm.agent_first_response_at is null
         then true
         else false
-    end as missing_agent_response_flag
+    end as missing_agent_response_flag,
 
-from {{ ref('stg_tickets') }} as t
+    t.ingested_at as ticket_ingested_at,
+    t.latest_event_ingested_at
+
+from tickets_to_process as t
 
 left join {{ ref('int_ticket_metrics') }} as tm
     on t.ticket_id = tm.ticket_id
