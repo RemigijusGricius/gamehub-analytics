@@ -522,3 +522,29 @@ Implement incremental ticket processing in the Gold layer, including change dete
 ## Future Improvements
 
 Implement row-level content hashing and automated incremental regression tests.
+
+## Reusable dbt Macros
+
+The project uses reusable Jinja macros to standardize analytical calculations and reduce SQL duplication across Gold-layer models.
+
+| Macro | Purpose |
+|---|---|
+| `calculate_rate` | Standardizes percentage calculations with configurable denominators, rounding and division-by-zero protection. |
+| `calculate_average` | Calculates averages with optional decimal precision. |
+
+### Refactored models
+
+- `mart_support_kpis`
+- `mart_agent_monthly_performance`
+- `mart_support_by_channel`
+- `mart_support_by_issue_category`
+- `mart_support_by_priority`
+
+### Validation
+
+- Compared original and refactored model results using bidirectional `EXCEPT ALL`.
+- Confirmed zero row differences across all five models.
+- Verified column names, data types and column order using `information_schema.columns`.
+- Preserved existing metric definitions and downstream reporting compatibility.
+
+The refactoring improves SQL maintainability while preserving existing analytical results. Zero-denominator rate calculations return NULL.
