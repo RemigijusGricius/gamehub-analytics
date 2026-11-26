@@ -41,6 +41,15 @@ jobs:
         run: dbt deps
 
 
+      - name: Prepare incremental model schema
+        run: |
+          dbt run \
+            --select +fct_tickets \
+            --empty \
+            --project-dir gamehub_dbt \
+            --profiles-dir gamehub_dbt \
+            --profile gamehub_dbt
+
       - name: Build and test dbt models
         run: |
           dbt build \
