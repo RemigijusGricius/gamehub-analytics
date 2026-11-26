@@ -1,0 +1,40 @@
+
+version: 2
+
+models:
+  - name: dim_customers_history
+    description: "Gold dimension table containing one row per customer version, including signup date, country, acquisition channel, and validity period."
+
+    columns:
+      - name: customer_version_id
+        description: "Unique identifier for each customer version."
+        data_tests:
+          - unique
+          - not_null
+          
+      - name: customer_id
+        description: "Unique identifier for each customer."
+        data_tests:
+          - not_null
+
+      - name: signup_at
+        description: "Timestamp of when the customer signed up."
+
+      - name: country
+        description: "Country of the customer."
+
+      - name: acquisition_channel
+        description: "Channel through which the customer was acquired."
+
+      - name: valid_from
+        description: "Timestamp of when the customer version became valid."
+        data_tests:
+          - not_null
+
+      - name: valid_to
+        description: "Timestamp of when the customer version ceased to be valid."
+
+      - name: is_current
+        description: "Flag indicating whether the customer version is currently valid."
+        data_tests:
+          - not_null

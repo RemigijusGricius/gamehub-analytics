@@ -576,3 +576,50 @@ Full dbt build completed successfully:
 - Warnings: 1
 - Errors: 0
 - Skipped: 0
+
+## Customer History — dbt Snapshots & SCD Type 2
+
+Implemented historical customer tracking using dbt snapshots and Slowly Changing Dimension Type 2 (SCD2) modeling.
+
+### Implementation
+
+- Enhanced `stg_customers` with deduplication to retain the latest customer record.
+- Implemented `snap_customers` using the dbt check strategy.
+- Configured `customer_id` as the snapshot unique key.
+- Tracked changes to the customer country while excluding ingestion metadata from change detection.
+- Created `dim_customers_history` as a business-facing historical dimension.
+- Retained `dim_customers` as the current-state customer dimension.
+- Implemented validity timestamps, unique customer version identifiers, and current-version indicators.
+
+### Historical Analysis
+
+Validated point-in-time joins using inclusive start and exclusive end timestamps. This enables historical events to be associated with the customer version valid at the event timestamp without duplicating fact records.
+
+Historical tracking begins when the snapshot first captures customer data. Changes represent observed snapshot timestamps rather than necessarily the actual business change timestamps.
+
+### Data Quality
+
+Implemented nine automated data quality tests:
+
+- Five generic tests covering uniqueness and required fields.
+- Exactly one active version per customer.
+- Valid chronological boundaries.
+- No overlapping historical validity periods.
+- Reconciliation between current and historical customer dimensions.
+
+### Validation
+
+Manually validated the following scenarios:
+
+- Initial snapshot creation.
+- Changes to tracked customer attributes.
+- New customer insertion.
+- Changes to untracked attributes.
+- Repeated snapshot execution without business changes.
+- Point-in-time joins and timestamp precision.
+
+Original source data and database state were restored after development experiments.
+
+Full dbt build results:
+
+`PASS=112 WARN=1 ERROR=0 SKIP=0 TOTAL=113`
