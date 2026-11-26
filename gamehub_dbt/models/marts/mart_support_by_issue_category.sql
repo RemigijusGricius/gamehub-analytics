@@ -12,17 +12,11 @@ SELECT
         END
     ) AS resolved_tickets,
 
-    ROUND(
-        AVG(first_response_hours), 2
-    ) AS avg_first_response_hours,
+    {{ calculate_average('first_response_hours', 2) }} AS avg_first_response_hours,
 
-    ROUND(
-        AVG(resolution_hours), 2
-    ) AS avg_first_resolution_hours,
+    {{ calculate_average('resolution_hours', 2) }} AS avg_first_resolution_hours,
 
-    ROUND(
-        AVG(last_resolution_hours), 2
-    ) AS avg_last_resolution_hours,
+    {{ calculate_average('last_resolution_hours', 2) }} AS avg_last_resolution_hours,
 
     COUNT(
         CASE
