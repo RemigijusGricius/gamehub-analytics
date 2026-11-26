@@ -19,17 +19,29 @@ models:
           Average hours between ticket creation and the first
           agent response. Tickets without a recorded first
           response are excluded from the average.
+        data_tests:
+          - valid_range:
+              arguments:
+                min_value: 0
 
       - name: avg_resolution_hours
         description: >
           Average hours between ticket creation and first
           resolution. Tickets without a resolution are excluded.
+        data_tests:
+          - valid_range:
+              arguments:
+                min_value: 0
 
       - name: resolution_rate
         description: >
           Percentage of all tickets with a recorded resolution.
         data_tests:
           - not_null
+          - valid_range:
+              arguments:
+                min_value: 0
+                max_value: 100
 
       - name: resolved_within_24h
         description: >
@@ -38,3 +50,7 @@ models:
           excluded from the denominator.
         data_tests:
           - not_null
+          - valid_range:
+              arguments:
+                min_value: 0
+                max_value: 100
