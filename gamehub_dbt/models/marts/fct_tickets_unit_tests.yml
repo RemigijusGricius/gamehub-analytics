@@ -1,0 +1,147 @@
+version: 2
+
+unit_tests:
+  - name: test_fct_tickets_full_refresh
+    description: "Verify that all source tickets are processed in non-incremental mode."
+    model: fct_tickets
+
+    overrides:
+      macros:
+        is_incremental: false
+
+    given:
+      - input: ref('stg_tickets')
+        rows:
+          - {ticket_id: T001, ingested_at: "2026-01-01 10:00:00"}
+          - {ticket_id: T002, ingested_at: "2026-01-01 11:00:00"}
+
+      - input: ref('stg_ticket_events')
+        rows:
+          - {ticket_id: T001, pipeline_ingested_at: "2026-01-01 12:00:00"}
+
+      - input: ref('int_ticket_metrics')
+        rows: []
+
+      - input: ref('int_ticket_resolution_actor')
+        rows: []
+
+    expect:
+      rows:
+        - ticket_id: T001
+          ticket_ingested_at: "2026-01-01 10:00:00"
+          latest_event_ingested_at: "2026-01-01 12:00:00"
+
+        - ticket_id: T002
+          ticket_ingested_at: "2026-01-01 11:00:00"
+          latest_event_ingested_at: null
+
+  - name: test_fct_tickets_incremental_selection
+    description: "Verify that only new tickets and tickets with changed ingestion timestamps are selected."
+    model: fct_tickets
+
+    overrides:
+      macros:
+        is_incremental: true
+
+    given:
+      - input: ref('stg_tickets')
+        rows:
+          - {ticket_id: T001, ingested_at: "2026-01-01 10:00:00"}
+          - {ticket_id: T002, ingested_at: "2026-01-02 10:00:00"}
+          - {ticket_id: T003, ingested_at: "2026-01-01 10:00:00"}
+          - {ticket_id: T004, ingested_at: "2026-01-02 10:00:00"}
+          - {ticket_id: T005, ingested_at: "2026-01-01 10:00:00"}
+          - {ticket_id: T006, ingested_at: "2026-01-01 10:00:00"}
+
+      - input: ref('stg_ticket_events')
+        rows:
+          - {ticket_id: T001, pipeline_ingested_at: "2026-01-01 12:00:00"}
+          - {ticket_id: T002, pipeline_ingested_at: "2026-01-01 12:00:00"}
+          - {ticket_id: T003, pipeline_ingested_at: "2026-01-01 12:00:00"}
+          - {ticket_id: T003, pipeline_ingested_at: "2026-01-02 12:00:00"}
+          - {ticket_id: T005, pipeline_ingested_at: "2026-01-02 12:00:00"}
+
+      - input: ref('int_ticket_metrics')
+        rows: []
+
+      - input: ref('int_ticket_resolution_actor')
+        rows: []
+
+      - input: this
+        rows:
+          - ticket_id: T001
+            ticket_ingested_at: "2026-01-01 10:00:00"
+            latest_event_ingested_at: "2026-01-01 12:00:00"
+
+          - ticket_id: T002
+            ticket_ingested_at: "2026-01-01 10:00:00"
+            latest_event_ingested_at: "2026-01-01 12:00:00"
+
+          - ticket_id: T003
+            ticket_ingested_at: "2026-01-01 10:00:00"
+            latest_event_ingested_at: "2026-01-01 12:00:00"
+
+          - ticket_id: T005
+            ticket_ingested_at: "2026-01-01 10:00:00"
+            latest_event_ingested_at: null
+
+          - ticket_id: T006
+            ticket_ingested_at: "2026-01-01 10:00:00"
+            latest_event_ingested_at: null
+
+    expect:
+      rows:
+        - ticket_id: T002
+          ticket_ingested_at: "2026-01-02 10:00:00"
+          latest_event_ingested_at: "2026-01-01 12:00:00"
+
+        - ticket_id: T003
+          ticket_ingested_at: "2026-01-01 10:00:00"
+          latest_event_ingested_at: "2026-01-02 12:00:00"
+
+        - ticket_id: T004
+          ticket_ingested_at: "2026-01-02 10:00:00"
+          latest_event_ingested_at: null
+
+        - ticket_id: T005
+          ticket_ingested_at: "2026-01-01 10:00:00"
+          latest_event_ingested_at: "2026-01-02 12:00:00"
+
+  - name: test_fct_tickets_missing_agent_response
+    description: "Verify missing agent response flag for different resolution actors and response timestamps."
+    model: fct_tickets
+
+    overrides:
+      macros:
+        is_incremental: false
+
+    given:
+      - input: ref('stg_tickets')
+        rows:
+          - {ticket_id: T001}
+          - {ticket_id: T002}
+          - {ticket_id: T003}
+          - {ticket_id: T004}
+
+      - input: ref('stg_ticket_events')
+        rows: []
+
+      - input: ref('int_ticket_metrics')
+        rows:
+          - {ticket_id: T001, agent_first_response_at: null}
+          - {ticket_id: T002, agent_first_response_at: "2026-01-01 10:30:00"}
+          - {ticket_id: T003, agent_first_response_at: null}
+          - {ticket_id: T004, agent_first_response_at: null}
+
+      - input: ref('int_ticket_resolution_actor')
+        rows:
+          - {ticket_id: T001, resolution_actor_type: agent}
+          - {ticket_id: T002, resolution_actor_type: agent}
+          - {ticket_id: T003, resolution_actor_type: bot}
+
+    expect:
+      rows:
+        - {ticket_id: T001, missing_agent_response_flag: true}
+        - {ticket_id: T002, missing_agent_response_flag: false}
+        - {ticket_id: T003, missing_agent_response_flag: false}
+        - {ticket_id: T004, missing_agent_response_flag: false}
