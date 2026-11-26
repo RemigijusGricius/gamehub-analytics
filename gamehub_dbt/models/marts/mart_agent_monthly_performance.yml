@@ -26,40 +26,67 @@ models:
         description: "Number of tickets assigned to the agent."
         data_tests:
           - not_null
+          - valid_range:
+              arguments:
+                min_value: 1
 
       - name: resolved_tickets
         description: "Number of assigned tickets with a recorded resolution."
         data_tests:
           - not_null
+          - valid_range:
+              arguments:
+                min_value: 0
 
       - name: unresolved_tickets
         description: "Number of tickets assigned to the agent but not yet resolved."
         data_tests:
           - not_null
+          - valid_range:
+              arguments:
+                min_value: 0
 
       - name: avg_resolution_hours
         description: "Average time (in hours) between ticket creation and resolution."
+        data_tests:
+          - valid_range:
+              arguments:
+                min_value: 0
 
 
       - name: avg_first_response_hours
         description: "Average time (in hours) between ticket creation and first response."
+        data_tests:
+          - valid_range:
+              arguments:
+                min_value: 0
 
 
       - name: resolution_rate_pct
         description: "Percentage of assigned tickets with a recorded resolution, expressed on a 0–100 scale."
         data_tests:
-          - not_null   
+          - not_null
+          - valid_range:
+              arguments:
+                min_value: 0
+                max_value: 100
 
       - name: first_response_count
         description: "Number of assigned tickets with a non-NULL first response duration."
         data_tests:
           - not_null   
+          - valid_range:
+              arguments:
+                min_value: 0
 
 
       - name: resolution_time_count
         description: "Number of assigned tickets with a non-NULL resolution duration."
         data_tests:
           - not_null        
+          - valid_range:
+              arguments:
+                min_value: 0
 
 
 

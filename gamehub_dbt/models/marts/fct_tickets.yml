@@ -1,4 +1,3 @@
-
 version: 2
 
 models:
@@ -24,7 +23,7 @@ models:
       - name: created_at
         data_tests:
           - not_null
-        
+
       - name: resolution_actor_type
         data_tests:
           - accepted_values:
@@ -42,3 +41,17 @@ models:
       - name: missing_agent_response_flag
         data_tests:
           - not_null
+
+      - name: first_response_hours
+        description: "Time in hours until the first agent response."
+        data_tests:
+          - valid_range:
+              arguments:
+                min_value: 0
+
+      - name: resolution_hours
+        description: "Ticket resolution duration in hours."
+        data_tests:
+          - valid_range:
+              arguments:
+                min_value: 0
