@@ -623,3 +623,49 @@ Original source data and database state were restored after development experime
 Full dbt build results:
 
 `PASS=112 WARN=1 ERROR=0 SKIP=0 TOTAL=113`
+
+## dbt Unit Testing
+
+The project implements 15 native dbt unit tests to validate transformation logic using controlled input fixtures and expected outputs.
+
+| Model | Unit tests | Coverage |
+|---|---:|---|
+| `int_ticket_metrics` | 3 | Duration calculations, NULL handling and rounding |
+| `int_tickets_customers` | 3 | Customer enrichment, unmatched records and empty inputs |
+| `int_ticket_lifecycle` | 6 | Event aggregation, reopening logic, multiple responses, orphan events and event ordering |
+| `fct_tickets` | 3 | Full-refresh behavior, incremental record selection and missing agent response flags |
+
+### Testing approach
+
+- Mock upstream dependencies using `given` and `ref()`.
+- Define expected transformation results using `expect`.
+- Test incremental and non-incremental execution using macro overrides.
+- Mock the existing incremental target table using `this`.
+- Validate NULL-safe comparisons and business logic edge cases.
+
+### Running tests
+
+Run all unit tests:
+
+```bash
+dbt test --select "test_type:unit"
+```
+
+Run all data tests:
+
+```bash
+dbt test --select "test_type:data"
+```
+
+Run the complete project build, including unit and data tests:
+
+```bash
+dbt build
+```
+
+### Validation results
+
+- 15 native dbt unit tests passed.
+- Full project build: 127 passed, 1 warning, 0 errors.
+
+Incremental unit tests validate the records selected for processing, while integration testing validates the actual incremental materialization behavior.

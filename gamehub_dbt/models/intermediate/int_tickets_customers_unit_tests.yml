@@ -1,0 +1,90 @@
+version: 2
+
+unit_tests:
+  - name: test_ticket_customer_join
+    description: "Verify customer enrichment and preservation of tickets without matching customers."
+    model: int_tickets_customers
+
+    given:
+      - input: ref('stg_tickets')
+        rows:
+          - ticket_id: T001
+            customer_id: C001
+          - ticket_id: T002
+            customer_id: C002
+
+      - input: ref('stg_customers')
+        rows:
+          - customer_id: C001
+            signup_at: "2025-01-01 10:00:00"
+            country: US
+            acquisition_channel: organic
+
+    expect:
+      rows:
+        - ticket_id: T001
+          customer_id: C001
+          customer_signup_at: "2025-01-01 10:00:00"
+          customer_country: US
+          acquisition_channel: organic
+
+        - ticket_id: T002
+          customer_id: C002
+          customer_signup_at: null
+          customer_country: null
+          acquisition_channel: null
+
+  - name: test_ticket_customer_multiple_tickets
+    description: "Ensure that multiple tickets for the same customer are correctly enriched."
+    model: int_tickets_customers
+
+    given:
+      - input: ref('stg_tickets')
+        rows:
+          - ticket_id: T001
+            customer_id: C001
+          - ticket_id: T002
+            customer_id: C001
+          - ticket_id: T003
+            customer_id: C001
+
+      - input: ref('stg_customers')
+        rows:
+          - customer_id: C001
+            country: DE
+
+    expect:
+      rows:
+        - ticket_id: T001
+          customer_country: DE
+
+        - ticket_id: T002
+          customer_country: DE
+
+        - ticket_id: T003
+          customer_country: DE
+
+  - name: test_ticket_customer_empty_customers
+    description: "Verify that tickets are preserved when the customers table is empty."
+    model: int_tickets_customers
+
+    given:
+      - input: ref('stg_tickets')
+        rows:
+          - ticket_id: T001
+            customer_id: C001
+          - ticket_id: T002
+            customer_id: C002
+
+      - input: ref('stg_customers')
+        rows: []
+
+    expect:
+      rows:
+          - ticket_id: T001
+            customer_id: C001
+            customer_country: null
+
+          - ticket_id: T002
+            customer_id: C002
+            customer_country: null

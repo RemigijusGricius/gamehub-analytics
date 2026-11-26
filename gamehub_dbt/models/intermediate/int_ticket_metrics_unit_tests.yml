@@ -1,0 +1,71 @@
+version: 2
+
+unit_tests:
+  - name: test_ticket_metrics_normal_resolution
+    description: "Verify duration calculations for a normally resolved ticket."
+    model: int_ticket_metrics
+
+    given:
+      - input: ref('int_ticket_lifecycle')
+        rows:
+          - ticket_id: T001
+            created_at: "2026-01-01 10:00:00"
+            agent_first_response_at: "2026-01-01 10:30:00"
+            resolved_at: "2026-01-01 12:00:00"
+            first_resolved_at: "2026-01-01 12:00:00"
+            last_resolved_at: "2026-01-01 12:00:00"
+            reopened_flag: false
+            reopen_count: 0
+
+    expect:
+      rows:
+        - ticket_id: T001
+          first_response_hours: 0.50
+          resolution_hours: 2.00
+          last_resolution_hours: 2.00
+
+  - name: test_ticket_metrics_unresolved
+    description: "Verify duration calculations for an unresolved ticket."
+    model: int_ticket_metrics
+
+    given:
+      - input: ref('int_ticket_lifecycle')
+        rows:
+          - ticket_id: T002
+            created_at: "2026-01-01 10:00:00"
+            agent_first_response_at: "2026-01-01 10:15:00"
+            resolved_at: null
+            first_resolved_at: null
+            last_resolved_at: null
+            reopened_flag: false
+            reopen_count: 0
+
+    expect:
+      rows:
+        - ticket_id: T002
+          first_response_hours: 0.25
+          resolution_hours: null
+          last_resolution_hours: null
+
+  - name: test_ticket_metrics_rounding
+    description: "Ensure the model correctly converts minutes into hours and rounds the results to two decimal places."
+    model: int_ticket_metrics
+
+    given:
+      - input: ref('int_ticket_lifecycle')
+        rows:
+          - ticket_id: T003
+            created_at: "2026-01-01 10:00:00"
+            agent_first_response_at: "	2026-01-01 10:10:00"
+            resolved_at: "2026-01-01 11:05:00"
+            first_resolved_at: "2026-01-01 11:05:00"
+            last_resolved_at: "2026-01-01 11:05:00"
+            reopened_flag: false
+            reopen_count: 0
+
+    expect:
+      rows:
+        - ticket_id: T003
+          first_response_hours: 0.17
+          resolution_hours: 1.08
+          last_resolution_hours: 1.08
