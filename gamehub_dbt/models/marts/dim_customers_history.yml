@@ -1,40 +1,42 @@
-
 version: 2
-
 models:
   - name: dim_customers_history
-    description: "Gold dimension table containing one row per customer version, including signup date, country, acquisition channel, and validity period."
-
+    description: Gold dimension table containing one row per customer version, including signup date, country, acquisition
+      channel, and validity period.
+    config:
+      contract:
+        enforced: true
     columns:
       - name: customer_version_id
-        description: "Unique identifier for each customer version."
+        description: Unique identifier for each customer version.
         data_tests:
           - unique
           - not_null
-          
+        data_type: varchar
       - name: customer_id
-        description: "Unique identifier for each customer."
+        description: Unique identifier for each customer.
         data_tests:
           - not_null
-
+        data_type: varchar
       - name: signup_at
-        description: "Timestamp of when the customer signed up."
-
+        description: Timestamp of when the customer signed up.
+        data_type: timestamp
       - name: country
-        description: "Country of the customer."
-
+        description: Country of the customer.
+        data_type: varchar
       - name: acquisition_channel
-        description: "Channel through which the customer was acquired."
-
+        description: Channel through which the customer was acquired.
+        data_type: varchar
       - name: valid_from
-        description: "Timestamp of when the customer version became valid."
+        description: Timestamp of when the customer version became valid.
         data_tests:
           - not_null
-
+        data_type: timestamp
       - name: valid_to
-        description: "Timestamp of when the customer version ceased to be valid."
-
+        description: Timestamp of when the customer version ceased to be valid.
+        data_type: timestamp
       - name: is_current
-        description: "Flag indicating whether the customer version is currently valid."
+        description: Flag indicating whether the customer version is currently valid.
         data_tests:
           - not_null
+        data_type: boolean

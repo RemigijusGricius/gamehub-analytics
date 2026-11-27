@@ -1,54 +1,53 @@
-
 version: 2
-
 models:
   - name: mart_agent_performance
-    description: "Support performance metrics aggregated by agent. One row per agent."
-
+    description: Support performance metrics aggregated by agent. One row per agent.
+    config:
+      contract:
+        enforced: true
     columns:
       - name: assigned_agent_id
-        description: "ID of the assigned agent."
+        description: ID of the assigned agent.
         data_tests:
           - unique
           - not_null
-
+        data_type: varchar
       - name: total_tickets
-        description: "Number of tickets assigned to the agent."
+        description: Number of tickets assigned to the agent.
         data_tests:
           - not_null
           - valid_range:
               arguments:
                 min_value: 1
-
+        data_type: bigint
       - name: resolved_tickets
-        description: "Number of tickets with at least one resolution event."
+        description: Number of tickets with at least one resolution event.
         data_tests:
           - not_null
           - valid_range:
               arguments:
                 min_value: 0
-
+        data_type: hugeint
       - name: resolution_rate_pct
-        description: "Percentage of tickets resolved by the agent."
+        description: Percentage of tickets resolved by the agent.
         data_tests:
           - not_null
           - valid_range:
               arguments:
                 min_value: 0
                 max_value: 100
-
+        data_type: double
       - name: avg_first_response_hours
-        description: "Average time (in hours) between ticket creation and first response."
+        description: Average time (in hours) between ticket creation and first response.
         data_tests:
           - valid_range:
               arguments:
                 min_value: 0
-
-
+        data_type: double
       - name: avg_resolution_hours
-        description: "Average time (in hours) between ticket creation and resolution."
+        description: Average time (in hours) between ticket creation and resolution.
         data_tests:
-        - valid_range:
-            arguments:
-              min_value: 0
-
+          - valid_range:
+              arguments:
+                min_value: 0
+        data_type: double

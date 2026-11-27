@@ -1,56 +1,68 @@
-
 version: 2
-
 models:
   - name: mart_support_kpis
-    description: >
-      Aggregated customer support KPIs across all tickets.
-      Contains one row with ticket volume, resolution rates,
+    description: 'Aggregated customer support KPIs across all tickets. Contains one row with ticket volume, resolution rates,
       and average response and resolution times.
 
+      '
+    config:
+      contract:
+        enforced: true
     columns:
       - name: total_tickets
-        description: "Total number of support tickets."
+        description: Total number of support tickets.
         data_tests:
           - not_null
-
+        data_type: bigint
       - name: avg_first_response_hours
-        description: >
-          Average hours between ticket creation and the first
-          agent response. Tickets without a recorded first
+        description: 'Average hours between ticket creation and the first agent response. Tickets without a recorded first
           response are excluded from the average.
+
+          '
         data_tests:
           - valid_range:
               arguments:
                 min_value: 0
-
+        data_type: double
       - name: avg_resolution_hours
-        description: >
-          Average hours between ticket creation and first
-          resolution. Tickets without a resolution are excluded.
+        description: 'Average hours between ticket creation and first resolution. Tickets without a resolution are excluded.
+
+          '
         data_tests:
           - valid_range:
               arguments:
                 min_value: 0
-
+        data_type: double
       - name: resolution_rate
-        description: >
-          Percentage of all tickets with a recorded resolution.
-        data_tests:
-          - not_null
-          - valid_range:
-              arguments:
-                min_value: 0
-                max_value: 100
+        description: 'Percentage of all tickets with a recorded resolution.
 
-      - name: resolved_within_24h
-        description: >
-          Percentage of resolved tickets with a resolution
-          time of 24 hours or less. Unresolved tickets are
-          excluded from the denominator.
+          '
         data_tests:
           - not_null
           - valid_range:
               arguments:
                 min_value: 0
                 max_value: 100
+        data_type: double
+      - name: resolved_within_24h
+        description: 'Percentage of resolved tickets with a resolution time of 24 hours or less. Unresolved tickets are excluded
+          from the denominator.
+
+          '
+        data_tests:
+          - not_null
+          - valid_range:
+              arguments:
+                min_value: 0
+                max_value: 100
+        data_type: double
+      - name: bot_resolution_rate
+        data_type: double
+      - name: reopening_rate
+        data_type: double
+      - name: avg_last_resolution_hours
+        data_type: double
+      - name: missing_agent_response_rate
+        data_type: double
+      - name: agent_resolution_rate
+        data_type: double

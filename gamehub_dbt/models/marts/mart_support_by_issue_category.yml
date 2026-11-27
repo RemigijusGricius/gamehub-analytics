@@ -1,32 +1,39 @@
-
 version: 2
-
 models:
   - name: mart_support_by_issue_category
-    description: "Support performance metrics aggregated by issue category."
-
+    description: Support performance metrics aggregated by issue category.
+    config:
+      contract:
+        enforced: true
     columns:
       - name: issue_category
-        description: "Customer support issue category. May be blank or NULL."
+        description: Customer support issue category. May be blank or NULL.
         data_tests:
           - unique
-
+        data_type: varchar
       - name: total_tickets
         data_tests:
           - not_null
-
+        data_type: bigint
       - name: resolved_tickets
         data_tests:
           - not_null
-
+        data_type: bigint
+      - name: avg_first_response_hours
+        data_type: double
+      - name: avg_first_resolution_hours
+        data_type: double
+      - name: avg_last_resolution_hours
+        data_type: double
       - name: bot_resolved_tickets
         data_tests:
           - not_null
-
+        data_type: bigint
       - name: reopened_tickets
         data_tests:
           - not_null
-
+        data_type: bigint
       - name: reopening_rate
         data_tests:
           - not_null
+        data_type: double

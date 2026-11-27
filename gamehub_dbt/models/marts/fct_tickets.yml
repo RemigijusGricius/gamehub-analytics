@@ -1,57 +1,86 @@
 version: 2
-
 models:
   - name: fct_tickets
-    description: "One row per support ticket, enriched with customer attributes."
-
+    description: One row per support ticket, enriched with customer attributes.
+    config:
+      contract:
+        enforced: true
+      on_schema_change: fail
     columns:
       - name: ticket_id
-        description: "Unique support ticket identifier."
+        description: Unique support ticket identifier.
         data_tests:
           - unique
           - not_null
-
+        data_type: varchar
       - name: customer_id
-        description: "Customer identifier linking each ticket to dim_customers."
+        description: Customer identifier linking each ticket to dim_customers.
         data_tests:
           - not_null
           - relationships:
               arguments:
                 to: ref('dim_customers')
                 field: customer_id
-
+        data_type: varchar
       - name: created_at
         data_tests:
           - not_null
-
+        data_type: timestamp
+      - name: created_date
+        data_type: date
+      - name: issue_category
+        data_type: varchar
+      - name: channel
+        data_type: varchar
+      - name: priority
+        data_type: varchar
+      - name: assigned_agent_id
+        data_type: varchar
+      - name: agent_first_response_at
+        data_type: timestamp
+      - name: first_response_hours
+        description: Time in hours until the first agent response.
+        data_tests:
+          - valid_range:
+              arguments:
+                min_value: 0
+        data_type: double
+      - name: resolved_at
+        data_type: timestamp
+      - name: resolution_hours
+        description: Ticket resolution duration in hours.
+        data_tests:
+          - valid_range:
+              arguments:
+                min_value: 0
+        data_type: double
+      - name: first_resolved_at
+        data_type: timestamp
+      - name: last_resolved_at
+        data_type: timestamp
+      - name: last_resolution_hours
+        data_type: double
+      - name: reopened_flag
+        data_tests:
+          - not_null
+        data_type: boolean
+      - name: reopen_count
+        data_tests:
+          - not_null
+        data_type: bigint
       - name: resolution_actor_type
         data_tests:
           - accepted_values:
               arguments:
-                values: ['agent', 'bot']
-
-      - name: reopened_flag
-        data_tests:
-          - not_null
-
-      - name: reopen_count
-        data_tests:
-          - not_null
-
+                values:
+                  - agent
+                  - bot
+        data_type: varchar
       - name: missing_agent_response_flag
         data_tests:
           - not_null
-
-      - name: first_response_hours
-        description: "Time in hours until the first agent response."
-        data_tests:
-          - valid_range:
-              arguments:
-                min_value: 0
-
-      - name: resolution_hours
-        description: "Ticket resolution duration in hours."
-        data_tests:
-          - valid_range:
-              arguments:
-                min_value: 0
+        data_type: boolean
+      - name: ticket_ingested_at
+        data_type: timestamp with time zone
+      - name: latest_event_ingested_at
+        data_type: timestamp with time zone

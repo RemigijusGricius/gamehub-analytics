@@ -1,37 +1,44 @@
-
 version: 2
-
 models:
   - name: mart_support_by_priority
-    description: "Customer support performance aggregated by ticket priority."
-
+    description: Customer support performance aggregated by ticket priority.
+    config:
+      contract:
+        enforced: true
     columns:
       - name: priority
-        description: "Ticket priority level."
+        description: Ticket priority level.
         data_tests:
           - unique
           - not_null
-
+        data_type: varchar
       - name: total_tickets
         data_tests:
           - not_null
-
+        data_type: bigint
       - name: resolved_tickets
         data_tests:
           - not_null
-
+        data_type: bigint
       - name: resolution_rate
         data_tests:
           - not_null
-
+        data_type: double
+      - name: avg_first_response_hours
+        data_type: double
+      - name: avg_first_resolution_hours
+        data_type: double
+      - name: avg_last_resolution_hours
+        data_type: double
       - name: bot_resolved_tickets
         data_tests:
           - not_null
-
+        data_type: bigint
       - name: reopened_tickets
         data_tests:
           - not_null
-
+        data_type: bigint
       - name: reopening_rate
         data_tests:
           - not_null
+        data_type: double
