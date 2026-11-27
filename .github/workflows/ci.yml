@@ -40,6 +40,13 @@ jobs:
         working-directory: gamehub_dbt
         run: dbt deps
 
+      - name: Check source freshness
+        run: |
+          dbt source freshness \
+            --project-dir gamehub_dbt \
+            --profiles-dir gamehub_dbt \
+            --profile gamehub_dbt
+
 
       - name: Prepare incremental model schema
         run: |
