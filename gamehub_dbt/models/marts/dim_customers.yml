@@ -1,13 +1,29 @@
-
 version: 2
 
 models:
   - name: dim_customers
     description: "Gold dimension table containing one row per customer, including signup date, country, and acquisition channel."
 
+    config:
+      contract:
+        enforced: true
+
     columns:
       - name: customer_id
         description: "Unique identifier for each customer."
+        data_type: varchar
         data_tests:
           - unique
           - not_null
+
+      - name: signup_at
+        description: "Timestamp when the customer registered."
+        data_type: timestamp
+
+      - name: country
+        description: "Customer country."
+        data_type: varchar
+
+      - name: acquisition_channel
+        description: "Channel through which the customer was acquired."
+        data_type: varchar

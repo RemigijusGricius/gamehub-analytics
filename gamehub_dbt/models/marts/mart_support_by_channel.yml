@@ -1,33 +1,40 @@
-
 version: 2
-
 models:
   - name: mart_support_by_channel
-    description: "Support performance metrics aggregated by channel. One row per channel."
-
+    description: Support performance metrics aggregated by channel. One row per channel.
+    config:
+      contract:
+        enforced: true
     columns:
       - name: channel
-        description: "Customer support channel."
+        description: Customer support channel.
         data_tests:
           - unique
           - not_null
-
+        data_type: varchar
       - name: total_tickets
-        description: "Number of tickets in the channel."
+        description: Number of tickets in the channel.
         data_tests:
           - not_null
-
+        data_type: bigint
       - name: resolved_tickets
-        description: "Number of tickets with at least one resolution event."
+        description: Number of tickets with at least one resolution event.
         data_tests:
           - not_null
-
+        data_type: bigint
+      - name: avg_response_hours
+        data_type: double
+      - name: avg_resolution_time
+        data_type: double
+      - name: avg_last_resolution_hours
+        data_type: double
       - name: bot_resolved_tickets
-        description: "Number of tickets whose latest resolution actor was a bot."
+        description: Number of tickets whose latest resolution actor was a bot.
         data_tests:
           - not_null
-
+        data_type: bigint
       - name: reopened_tickets
-        description: "Number of tickets reopened at least once."
+        description: Number of tickets reopened at least once.
         data_tests:
           - not_null
+        data_type: bigint

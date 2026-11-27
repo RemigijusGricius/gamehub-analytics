@@ -748,3 +748,78 @@ business data recency.
 In a production environment, freshness monitoring should operate
 against persistent source tables and be complemented by upstream
 file delivery monitoring.
+
+## dbt Model Contracts
+
+The project implements enforced model contracts across all nine
+business-facing Gold models, covering 86 columns.
+
+Model contracts validate output column names and data types,
+protecting downstream consumers from unexpected schema changes.
+
+### Contract Coverage
+
+| Model | Columns | Materialization |
+|---|---:|---|
+| dim_customers | 4 | Table |
+| dim_customers_history | 8 | Table |
+| fct_tickets | 21 | Incremental |
+| mart_agent_monthly_performance | 10 | Table |
+| mart_agent_performance | 6 | Table |
+| mart_support_by_channel | 8 | Table |
+| mart_support_by_issue_category | 9 | Table |
+| mart_support_by_priority | 10 | Table |
+| mart_support_kpis | 10 | Table |
+
+### Incremental Schema Protection
+
+The incremental fact table uses the following configuration:
+
+```yaml
+config:
+  contract:
+    enforced: true
+  on_schema_change: fail
+```
+
+Model contracts ensure that SQL output matches the declared
+schema, while on_schema_change prevents uncontrolled changes
+to the existing incremental target table.
+
+Intentional schema changes require a reviewed schema migration
+or a controlled full refresh:
+
+```bash
+dbt build --select fct_tickets --full-refresh
+```
+
+Adding new columns through schema evolution does not
+automatically backfill historical records.
+
+### Validation
+
+The following contract scenarios were successfully tested:
+
+- Valid model schema accepted.
+- Incorrect column data type rejected.
+- Missing declared column rejected.
+- Additional undeclared column rejected.
+- Original model restored and successfully rebuilt.
+- Incremental model compatibility validated.
+- Full project build completed successfully.
+
+All existing data tests and unit tests were preserved.
+
+### Data Quality Framework
+
+| Mechanism | Purpose |
+|---|---|
+| Source freshness | Validate ingestion recency |
+| Model contracts | Validate output schema |
+| Unit tests | Validate transformation logic |
+| Generic data tests | Validate reusable data quality rules |
+| Singular data tests | Validate business-specific rules |
+| on_schema_change | Control incremental schema evolution |
+
+Contracts are enforced during model execution and therefore
+require no additional CI/CD command beyond the existing dbt build.
