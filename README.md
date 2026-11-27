@@ -669,3 +669,82 @@ dbt build
 - Full project build: 127 passed, 1 warning, 0 errors.
 
 Incremental unit tests validate the records selected for processing, while integration testing validates the actual incremental materialization behavior.
+
+## Source Freshness Monitoring
+
+The project implements dbt source freshness checks to detect stale
+source data before executing downstream transformations.
+
+### Freshness Configuration
+
+Freshness thresholds are defined at the source level and inherited
+by individual Bronze tables. Table-level overrides are used where
+ingestion metadata column names differ.
+
+| Source Table | Timestamp Column | Warning | Error |
+|---|---|---|---|
+| bronze.customers | ingested_at | 24 hours | 48 hours |
+| bronze.tickets | ingested_at | 24 hours | 48 hours |
+| bronze.ticket_events | ingested_at_1 | 24 hours | 48 hours |
+
+Freshness is evaluated using pipeline ingestion timestamps rather
+than business event timestamps to support late-arriving data.
+
+### Running Freshness Checks
+
+Check all configured sources:
+
+```bash
+dbt source freshness
+```
+
+Check an individual source:
+
+```bash
+dbt source freshness --select source:bronze.tickets
+```
+
+Freshness results are stored in `target/sources.json` and can be
+used for monitoring, alerting and orchestration.
+
+### Validation
+
+All three freshness scenarios were successfully validated by
+temporarily adjusting freshness thresholds without modifying
+the underlying source data.
+
+| Scenario | Expected Result | Validation |
+|---|---|---|
+| Data within freshness threshold | PASS | Passed |
+| Data exceeds warning threshold | WARN | Passed |
+| Data exceeds error threshold | ERROR STALE | Passed |
+
+### CI/CD Integration
+
+Source freshness is configured as a quality gate in the GitHub
+Actions workflow before dbt model execution.
+
+Pipeline execution sequence:
+
+1. Bronze data ingestion
+2. Install dbt dependencies
+3. Source freshness checks
+4. Prepare incremental model schema
+5. Build and test dbt models
+
+Pipeline behavior:
+
+- PASS: Continue pipeline execution.
+- WARN: Report warning and continue execution.
+- ERROR: Stop execution and prevent downstream transformations.
+
+### Known Limitations
+
+The CI environment creates a fresh DuckDB database and ingests
+source files during each execution. Therefore, freshness checks
+in CI validate ingestion recency rather than actual upstream
+business data recency.
+
+In a production environment, freshness monitoring should operate
+against persistent source tables and be complemented by upstream
+file delivery monitoring.

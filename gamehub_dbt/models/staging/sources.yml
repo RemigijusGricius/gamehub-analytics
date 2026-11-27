@@ -3,7 +3,22 @@ version: 2
 sources:
   - name: bronze
     schema: bronze
+
+    config:
+      loaded_at_field: ingested_at
+      freshness:
+        warn_after:
+          count: 24
+          period: hour
+        error_after:
+          count: 48
+          period: hour
+
     tables:
       - name: tickets
+
       - name: customers
+
       - name: ticket_events
+        config:
+          loaded_at_field: ingested_at_1
